@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Head of Social Media | Careers | Formulation Factory</title>
+  <meta name="description" content="Join Formulation Factory as Head of Social Media. Own organic publishing across every major platform with volume, consistency, and brand fidelity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c; --gold-light: #b8983f;
+      --bg: #faf9f7; --bg-card: #ffffff; --bg-elevated: #f5f4f1;
+      --dark: #1a1a1a; --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a; --text-tertiary: #8a8a8a;
+      --border: rgba(26, 26, 26, 0.08); --border-hover: rgba(26, 26, 26, 0.15);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'DM Sans', sans-serif; background-color: var(--bg); color: var(--text-primary); line-height: 1.6; }
+
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(250,249,247,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-weight: 700; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-primary); text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.nav-cta { color: #fff; background: var(--dark); padding: 10px 24px; font-weight: 600; transition: background 0.3s ease; }
+    .nav-links a.nav-cta:hover { background: #2a2a2a; }
+
+    .jd-container { max-width: 800px; margin: 0 auto; padding: 140px 40px 80px; }
+    .jd-back { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; margin-bottom: 48px; transition: color 0.3s ease; }
+    .jd-back:hover { color: var(--gold); }
+    .jd-back svg { width: 16px; height: 16px; }
+    .jd-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .jd-meta-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.5px; padding: 6px 16px; border: 1px solid rgba(201,168,76,0.35); color: #a8893c; }
+    .jd-title { font-weight: 700; font-size: clamp(36px,5vw,52px); line-height: 1.1; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 16px; }
+    .jd-subtitle { font-size: 18px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 48px; max-width: 640px; }
+    .jd-detail-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--border); }
+    .jd-detail-item label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .jd-detail-item p { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+    .jd-section { margin-bottom: 56px; }
+    .jd-section-label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .jd-section h3 { font-weight: 700; font-size: 20px; color: var(--text-primary); margin-bottom: 16px; letter-spacing: -0.3px; }
+    .jd-section p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px; }
+    .jd-section p strong { color: var(--text-primary); }
+    .jd-section ul { list-style: none; padding: 0; }
+    .jd-section ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .jd-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .jd-accountability { background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); padding: 32px; margin-bottom: 12px; }
+    .jd-accountability h4 { font-weight: 600; font-size: 16px; color: var(--text-primary); margin-bottom: 10px; }
+    .jd-accountability p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin: 0; }
+    .jd-apply-section { margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--border); text-align: center; }
+    .jd-apply-section p { font-size: 17px; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.7; }
+    .jd-apply-btn { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 18px 48px; text-decoration: none; transition: all 0.3s ease; }
+    .jd-apply-btn:hover { background: #2a2a2a; }
+
+    .footer { padding: 48px 40px; max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
+    .footer p { font-size: 13px; color: var(--text-tertiary); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--text-tertiary); text-decoration: none; transition: color 0.3s ease; }
+    .footer-links a:hover { color: var(--gold); }
+
+    @media (max-width: 700px) {
+      .nav { padding: 16px 24px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .jd-container { padding: 120px 24px 60px; }
+      .jd-detail-row { grid-template-columns: 1fr; gap: 20px; }
+      .jd-accountability { padding: 24px; }
+      .footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="https://formulationfactory.com" class="nav-logo">FORMULATION <span>FACTORY</span></a>
+    <div class="nav-links">
+      <a href="./">All Roles</a>
+      <a href="https://formulationfactory.com/pages/about">Our Story</a>
+      <a href="mailto:careers@formulationfactory.com?subject=Application: Head of Social Media" class="nav-cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <div class="jd-container">
+
+    <a href="./" class="jd-back">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"/></svg>
+      All Open Roles
+    </a>
+
+    <div class="jd-meta">
+      <span class="jd-meta-tag">Marketing</span>
+      <span class="jd-meta-tag">Remote (LatAm / Americas)</span>
+      <span class="jd-meta-tag">Full-Time</span>
+    </div>
+
+    <h1 class="jd-title">Head of Social Media</h1>
+    <p class="jd-subtitle">This is an operator role, not a strategy role. You will publish relentlessly, understand each platform at a native level, and serve as the connective tissue between our creative team and our audience.</p>
+
+    <div class="jd-detail-row">
+      <div class="jd-detail-item">
+        <label>Reports To</label>
+        <p>Brand Manager &amp; Head of Growth</p>
+      </div>
+      <div class="jd-detail-item">
+        <label>Location</label>
+        <p>Remote (LatAm / Americas TZ preferred)</p>
+      </div>
+      <div class="jd-detail-item">
+        <label>Compensation</label>
+        <p>$35K–$55K base | $45K–$70K total comp</p>
+      </div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Role Purpose</div>
+      <p>The Head of Social Media owns Formulation Factory's organic presence across every major platform. Your mandate is volume, consistency, and brand fidelity — shipping platform-optimized content at a pace that keeps us top-of-mind in a category where attention is everything.</p>
+      <p>You will work directly with the Creative Strategist and content writers to turn briefs into published content. You will not be handed a fully built machine — you will help build it. The expectation is that you are self-directed, systems-minded, and obsessed with the details of how content performs on each individual platform.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Core Accountabilities</div>
+      <div class="jd-accountability">
+        <h4>1. Platform Ownership</h4>
+        <p>Full ownership of publishing across Instagram, TikTok, Facebook, YouTube Shorts, Pinterest, and X. You manage the scheduling pipeline in Hootsuite or equivalent, maintain a content calendar 2–3 weeks in advance across all channels, and ensure no platform goes dark. Volume is the baseline — quality and accuracy are non-negotiable on top of it.</p>
+      </div>
+      <div class="jd-accountability">
+        <h4>2. Content Collaboration</h4>
+        <p>Work hand-in-hand with the Creative Strategist and content writers to brief, review, and publish value-add content — educational, authority-building, and community-driven. You are the final step before content goes live: formatting, captioning, native optimization, and scheduling. You are also responsible for sourcing and repurposing UGC, athlete content, and creator output.</p>
+      </div>
+      <div class="jd-accountability">
+        <h4>3. Platform-Native Adaptation</h4>
+        <p>What works on TikTok is not what works on Pinterest. What performs on Instagram Reels does not translate directly to YouTube Shorts. You understand these distinctions at a granular level — hook structure, caption length, hashtag behavior, posting cadence, trending formats — and you adapt content accordingly without being told to.</p>
+      </div>
+      <div class="jd-accountability">
+        <h4>4. Community and Engagement</h4>
+        <p>Manage comments and DMs across all platforms. Build genuine relationships with the audience, respond with the brand's voice, and flag high-value community members and organic advocates to the Brand Manager. You are the first to know when audience sentiment shifts and the first to report it.</p>
+      </div>
+      <div class="jd-accountability">
+        <h4>5. Performance Reporting</h4>
+        <p>Deliver a weekly social performance snapshot covering follower growth, reach, engagement rate, and top and bottom performing posts by platform. Maintain a living content performance log that captures which angles, hooks, and formats drive measurable outcomes. Use this data to inform the content calendar going forward.</p>
+      </div>
+      <div class="jd-accountability">
+        <h4>6. Brand Integrity</h4>
+        <p>Every piece of content that goes out carries the Formulation Factory name. We are a brand built on transparency, scientific accuracy, and earned trust. You must be fluent enough in health, supplementation, and fitness to catch errors before they publish — and rigorous enough to never let marketing language override factual truth.</p>
+      </div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Explicit Boundaries</div>
+      <p>This role does not own:</p>
+      <ul>
+        <li>Paid media strategy, ad creative, or media buying</li>
+        <li>Brand positioning or product philosophy — those decisions belong to the Founder</li>
+        <li>Creative strategy direction — you execute and optimize briefs, you don't set the direction</li>
+        <li>Influencer contracting or partnership negotiation</li>
+        <li>Final sign-off on campaign strategy or channel expansion decisions</li>
+      </ul>
+      <p>You are expected to bring platform-level insight and flag opportunities proactively. Execution excellence is your ownership, not direction-setting.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Decision Rights &amp; Key Interfaces</div>
+      <p><strong>Owns:</strong> All publishing decisions, scheduling, platform-level formatting, community responses, and performance reporting within content approved by the creative team.</p>
+      <p><strong>Reports to:</strong> Brand Manager and Head of Growth for strategic alignment; Founder for brand voice questions.</p>
+      <p><strong>Collaborates closely with:</strong> Creative Strategist on content briefs and campaign planning, Content Writers on caption and copy review, Head of Growth on coordination with paid media, and CX Lead on community escalations.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">This Role Is Not</div>
+      <ul>
+        <li>A social media manager who posts occasionally and monitors mentions</li>
+        <li>A strategist who builds decks about what we should post someday</li>
+        <li>A coordinator who waits for content to land in their inbox before acting</li>
+        <li>A generalist marketer with social as one of five responsibilities</li>
+      </ul>
+      <p>This is a volume operator who lives in the platforms, ships content relentlessly, and treats organic social as a serious commercial lever — not a branding afterthought.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Year-One Success Profile</div>
+      <ul>
+        <li>All active channels are publishing on consistent, high-frequency cadences with no gaps</li>
+        <li>A content calendar system is built and running 3+ weeks ahead at all times</li>
+        <li>Platform-specific performance benchmarks are established and improving quarter over quarter</li>
+        <li>The creative team's output is being published faster and with less friction than before this person joined</li>
+        <li>Community engagement rates are measurably above industry benchmarks for the supplement category</li>
+        <li>The Brand Manager and Head of Growth trust the social pipeline to run without daily oversight</li>
+      </ul>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Ideal Candidate</div>
+      <ul>
+        <li>2–4+ years managing organic social for a consumer brand — supplement, fitness, wellness, or health-adjacent strongly preferred</li>
+        <li>Genuine working knowledge of health, supplementation, biohacking, and fitness; you can speak intelligently about ingredients, protocols, and the science behind them without being coached</li>
+        <li>Proven volume operator who has managed multi-platform, high-frequency publishing pipelines and has the scheduling tool experience to prove it</li>
+        <li>Proficient in Hootsuite, Later, Buffer, or equivalent — you've built workflows, not just used them</li>
+        <li>Platform-native across at least three major channels with a clear understanding of the algorithmic and format differences between them</li>
+        <li>Strong writer — captions, hooks, and CTAs that sound like a smart human who respects the audience's intelligence</li>
+        <li>High standard for factual accuracy — in this brand, a bad health claim is a brand integrity failure, not a typo</li>
+      </ul>
+    </div>
+
+    <div class="jd-apply-section">
+      <p>If this sounds like you, we want to hear from you.</p>
+      <a href="mailto:careers@formulationfactory.com?subject=Application: Head of Social Media" class="jd-apply-btn">Apply for This Role</a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Formulation Factory LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://formulationfactory.com">Shop</a>
+      <a href="https://formulationfactory.com/pages/about">Our Story</a>
+      <a href="./">All Roles</a>
+    </div>
+  </footer>
+
+</body>
+</html>
