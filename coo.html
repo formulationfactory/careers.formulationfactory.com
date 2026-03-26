@@ -182,6 +182,47 @@
       color: var(--text-secondary); margin: 0;
     }
 
+    /* ── SCORECARD MILESTONES ── */
+    .milestone {
+      margin-bottom: 32px;
+    }
+    .milestone-header {
+      font-weight: 700; font-size: 17px;
+      color: var(--text-primary); margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+    .milestone ul {
+      list-style: none; padding: 0;
+    }
+    .milestone ul li {
+      font-size: 15px; line-height: 1.8;
+      color: var(--text-secondary);
+      padding-left: 20px; position: relative;
+      margin-bottom: 8px;
+    }
+    .milestone ul li::before {
+      content: '—'; position: absolute; left: 0;
+      color: var(--gold); font-weight: 600;
+    }
+    .milestone ul li strong { color: var(--text-primary); }
+
+    .competency-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+    .competency-item {
+      font-size: 15px; line-height: 1.7;
+      color: var(--text-secondary);
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .competency-item strong {
+      color: var(--text-primary); display: block; margin-bottom: 2px;
+    }
+
     /* ── APPLY CTA ── */
     .jd-apply-section {
       margin-top: 80px; padding-top: 64px;
@@ -222,6 +263,7 @@
       .jd-container { padding: 120px 24px 60px; }
       .jd-detail-row { grid-template-columns: 1fr; gap: 20px; }
       .jd-accountability { padding: 24px; }
+      .competency-grid { grid-template-columns: 1fr; }
       .footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
     }
   </style>
@@ -251,7 +293,6 @@
     </div>
 
     <h1 class="jd-title">Chief Operating Officer</h1>
-    <p class="jd-subtitle">Formulation Factory is looking for its co-pilot. Not a traditional executive who manages from altitude — a genuine operator who thinks like a founder, moves like an athlete, and is as obsessed with performance as the person who started this company.</p>
 
     <div class="jd-detail-row">
       <div class="jd-detail-item">
@@ -268,41 +309,101 @@
       </div>
     </div>
 
-    <!-- ROLE PURPOSE -->
+    <!-- MISSION -->
     <div class="jd-section">
-      <div class="jd-section-label">Role Purpose</div>
-      <p>This role exists because the business has outgrown what one person can run. We are at $13M+ ARR and scaling hard. The COO takes ownership of day-to-day execution across every function — growth, operations, Amazon, DTC, finance, supply chain, and team — so the Founder can focus on product truth, brand philosophy, and long-term vision.</p>
+      <div class="jd-section-label">Mission</div>
+      <p style="font-size: 18px; line-height: 1.7; color: var(--text-primary); font-weight: 500;">Own day-to-day execution across every function at Formulation Factory — growth, operations, Amazon, DTC, finance, supply chain, and team — so the Founder is freed to focus on acquisitions, major partnerships, content, and long-term brand vision. Scale the business from $13M to $20M+ in year one without breaking what's working or burning out the team.</p>
+    </div>
+
+    <!-- ROLE CONTEXT -->
+    <div class="jd-section">
+      <div class="jd-section-label">Role Context</div>
+      <p>This role exists because the business has outgrown what one person can run. We are at $13M+ ARR and scaling hard. You are the Founder's co-pilot — not a traditional executive who manages from altitude, but a genuine operator who thinks like a founder and moves like an athlete.</p>
       <p>You are biased toward speed and decisive action, but you know how to protect the team from chaos with clear priorities and simple systems. You are not here to sit above the work. You are here to be in it, alongside the CEO, at the same intensity.</p>
       <p>If you have a strong opinion about magnesium glycinate vs threonate, know what your cortisol looks like at noon, and have built or scaled something real in the DTC supplement space — keep reading.</p>
     </div>
 
-    <!-- CORE ACCOUNTABILITIES -->
+    <!-- SCORECARD: OUTCOMES -->
     <div class="jd-section">
-      <div class="jd-section-label">Core Accountabilities</div>
+      <div class="jd-section-label">Scorecard — Outcomes</div>
+      <p>This is how we measure success. Not effort, not hours, not how busy you look — outcomes with metrics and deadlines.</p>
 
-      <div class="jd-accountability">
-        <h4>1. Operations Ownership</h4>
-        <p>Own day-to-day execution across all business functions. Set priorities, sequence initiatives, and drive delivery to an elite standard. You design the operating rhythm — weekly reviews, KPI dashboards, cross-functional syncs, and accountability mechanisms — and you enforce it. You are the central integrator: you resolve trade-offs decisively, eliminate silos, and prevent escalation bottlenecks from reaching the Founder.</p>
+      <div class="milestone">
+        <div class="milestone-header">By Month 3</div>
+        <ul>
+          <li>The Founder spends <strong>&lt;5 hrs/week</strong> on recurring ops and channel meetings (Amazon, DTC, CX, supply chain)</li>
+          <li>A single weekly operating cadence is in place — scorecard, issues list, clear owner per metric — and is followed <strong>4 out of 4 weeks</strong> by all leaders</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>2. Channel and Revenue Orchestration</h4>
-        <p>Fluent in Amazon FBA, Shopify DTC, TikTok Shop, and paid media. You've managed owners of these functions and can dive into details when needed, but your primary job is orchestrating — not being the channel specialist. You read dashboards, ask sharp questions, pressure-test strategy, and hold channel leads accountable to revenue targets.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 6</div>
+        <ul>
+          <li><strong>Amazon:</strong> Hero SKU in-stock rate ≥ 98%. TACOS improved by at least 3–5 pts vs baseline while maintaining or increasing total Amazon revenue. Weekly dashboard live with revenue, TACOS, ACOS, CVR, and contribution margin per order</li>
+          <li><strong>DTC:</strong> MER improved by at least 20% vs baseline, or DTC revenue doubled at same MER. Core funnel and email/SMS flows are defined, documented, and reported weekly</li>
+          <li><strong>TikTok &amp; Meta:</strong> Pipeline of offers, landing pages, ads, and creatives running like a machine — at any point we can press the gas harder and nothing breaks</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>3. AI-Augmented Operations</h4>
-        <p>Comfortable using AI (ChatGPT, Claude, Perplexity, etc.) daily and turning those tools into team workflows. You don't need to be a prompt-engineering guru, but you relentlessly replace manual work with smarter systems and expect your team to do the same.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 9</div>
+        <ul>
+          <li>Company topline run rate is up <strong>30%+</strong> vs prior year with contribution margin equal or higher than at hire date</li>
+          <li>A rolling 13-week cash forecast is updated weekly and is within <strong>±10% variance</strong> of actuals for at least 3 consecutive months</li>
+          <li>At least <strong>3 major workflows</strong> (e.g., reporting, CX macros, purchase order process, content briefs) are automated or AI-assisted, reducing manual hours by ≥30% without adding headcount</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>4. Team Leadership</h4>
-        <p>Directly lead a high-output remote team across Growth, Operations, and CX. Set uncompromising standards, give direct feedback, and hold people accountable to results. You never settle for B players when A players exist.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 12</div>
+        <ul>
+          <li>Revenue has grown <strong>40%+ year-on-year</strong> while maintaining or improving contribution margin — north of $20M and the trajectory is accelerating, not plateauing</li>
+          <li>DTC is a meaningfully larger share of revenue than when you started — not an experiment, a real channel</li>
+          <li>Every team member has a written scorecard (3–5 KPIs each) and a weekly 1:1 rhythm with their manager</li>
+          <li>100% of B- and C-players identified: either improved to hitting their scorecard for 3 consecutive months, or exited and replaced</li>
+          <li>The Founder spends <strong>&lt;2 hrs/week</strong> on ops without growth slowing. ≥80% of cross-functional conflicts resolved by the COO and leadership team without Founder involvement</li>
+          <li>The Founder is spending time on acquisitions, major celebrity and influencer partnerships, podcast circuit, content creation, and long-term brand vision — the things only the CEO can do</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>5. Financial and Commercial Acumen</h4>
-        <p>Own the operating P&amp;L alongside the Founder. Understand contribution margin, CAC, LTV, TACOS, ACOS, MER, and the unit economics of both Amazon and DTC channels at a detailed level. You can build a forecast, read a QuickBooks report, and connect financial performance to operational decisions without needing a CFO to translate.</p>
-      </div>
-      <div class="jd-accountability">
-        <h4>6. Product and Supply Chain Intelligence</h4>
-        <p>Understand supplement formats — capsules, powders, gummies, softgels — at a level that lets you have intelligent conversations with contract manufacturers, evaluate formulation tradeoffs, and manage supply chain timelines without being misled. You don't need to be a formulator, but you need to know enough to hold vendors accountable and protect product quality and margin.</p>
+    </div>
+
+    <!-- SCORECARD: COMPETENCIES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard — Competencies</div>
+      <p>These are the behavioral traits that predict success in this role. We interview against these directly.</p>
+      <div class="competency-grid">
+        <div class="competency-item">
+          <strong>Operator, not observer</strong>
+          Gets into the details when needed, doesn't manage from altitude. Knows when to zoom in and when to zoom out.
+        </div>
+        <div class="competency-item">
+          <strong>Speed with structure</strong>
+          Biased toward action but builds the systems and cadences that let the team move fast without chaos.
+        </div>
+        <div class="competency-item">
+          <strong>Channel fluency</strong>
+          Fluent in Amazon FBA, Shopify DTC, TikTok Shop, and paid media. Orchestrates channel leads — reads dashboards, asks sharp questions, pressure-tests strategy.
+        </div>
+        <div class="competency-item">
+          <strong>Financial rigor</strong>
+          Owns a P&amp;L, builds forecasts, connects operational decisions to financial outcomes without needing a CFO to translate.
+        </div>
+        <div class="competency-item">
+          <strong>AI-augmented</strong>
+          Uses AI daily and turns tools into team workflows. Relentlessly replaces manual work with smarter systems.
+        </div>
+        <div class="competency-item">
+          <strong>Talent standard-setter</strong>
+          Holds people to results, gives direct feedback, identifies and exits underperformers. Never settles for B players.
+        </div>
+        <div class="competency-item">
+          <strong>Supply chain literate</strong>
+          Holds intelligent conversations with contract manufacturers, evaluates formulation tradeoffs, manages timelines without being misled.
+        </div>
+        <div class="competency-item">
+          <strong>Radical honesty</strong>
+          Pushes back hard with data. Never simply complies when they see a better path. Says what needs to be said.
+        </div>
       </div>
     </div>
 
@@ -313,17 +414,17 @@
       <ul>
         <li>Product vision, core formulation philosophy, or brand worldview — those belong to the Founder</li>
         <li>Final authority on brand standards or long-term mission — you execute within them and challenge constructively when needed</li>
-        <li>Creative direction for the brand — you ensure creative output is resourced and on schedule, not that you set the creative vision</li>
+        <li>Creative direction — you ensure creative output is resourced and on schedule, not that you set the creative vision</li>
       </ul>
-      <p>You are expected to push back hard when you disagree, bring data when you challenge direction, and never simply comply when you see a better path. But the brand's non-negotiable standards — ingredient transparency, third-party testing, no misleading marketing claims — are the foundation you operate on.</p>
+      <p>The brand's non-negotiable standards — ingredient transparency, third-party testing, no misleading marketing claims — are the foundation you operate on.</p>
     </div>
 
     <!-- DECISION RIGHTS -->
     <div class="jd-section">
-      <div class="jd-section-label">Decision Rights &amp; Key Interfaces</div>
+      <div class="jd-section-label">Decision Rights</div>
       <p><strong>Owns:</strong> All execution-level decisions, resource allocation, operational priorities, team performance management, and channel-level strategy within guardrails set by the Founder.</p>
       <p><strong>Reports to:</strong> Founder &amp; CEO.</p>
-      <p><strong>Collaborates closely with:</strong> Head of Growth on paid media and DTC performance, Head of Amazon on marketplace execution, Head of Operations on supply chain and 3PL, and all agency partners.</p>
+      <p><strong>Collaborates with:</strong> Head of Growth on paid media and DTC, Head of Amazon on marketplace execution, Head of Operations on supply chain and 3PL, and all agency partners.</p>
     </div>
 
     <!-- THIS ROLE IS NOT -->
@@ -335,22 +436,6 @@
         <li>A cautious executive who slows things down to build consensus</li>
         <li>A reactive tornado — all gas, no steering wheel</li>
       </ul>
-      <p>This is a co-founder-level operator who moves fast and builds the systems that let the whole team move fast without chaos.</p>
-    </div>
-
-    <!-- YEAR ONE -->
-    <div class="jd-section">
-      <div class="jd-section-label">Year-One Success Profile</div>
-      <ul>
-        <li>Revenue is north of $20M and the trajectory is accelerating, not plateauing</li>
-        <li>DTC is a meaningfully larger share of revenue than when you started — not an experiment, a real channel</li>
-        <li>TikTok and Meta are scaling aggressively with a pipeline of offers, landing pages, ads, and creatives that runs like a machine — at any point we can press the gas harder and nothing breaks</li>
-        <li>Contribution margin is maintained or improved while growing topline 50%+</li>
-        <li>A rolling 13-week cash forecast is live and tracking within 10% variance</li>
-        <li>The Founder is freed from day-to-day execution and spending time on the things that only the CEO can do — acquisitions, major celebrity and influencer partnerships, podcast circuit, content creation, and long-term brand vision</li>
-        <li>A clear operating cadence is established across every function and the team is held to it without the Founder in the room</li>
-        <li>The team is stronger — higher standards, better accountability, fewer underperformers, and the business runs faster than it did before you arrived</li>
-      </ul>
     </div>
 
     <!-- IDEAL CANDIDATE -->
@@ -358,10 +443,9 @@
       <div class="jd-section-label">Ideal Candidate</div>
       <ul>
         <li>5+ years operating in DTC ecommerce with experience managing teams across Amazon FBA, Shopify, and paid social</li>
-        <li>Supplement, health, wellness, or fitness industry experience strongly preferred — you understand the products, the customer, the regulatory environment, and the category dynamics</li>
+        <li>Supplement, health, wellness, or fitness industry experience strongly preferred</li>
         <li>A genuine, personal obsession with health optimization — you track your bloodwork, you know your stack, you follow the science</li>
-        <li>Strong financial literacy — you can own a P&amp;L, build a forecast, and connect operational decisions to financial outcomes without translation</li>
-        <li>High-volume operator by nature — you manage complexity across multiple workstreams simultaneously and thrive in that environment</li>
+        <li>Strong financial literacy — you can own a P&amp;L, build a forecast, and connect operational decisions to financial outcomes</li>
         <li>You have built or scaled a brand, a team, or a business unit from something small to something real</li>
       </ul>
       <p><strong>Bonus:</strong> You've built custom GPTs, automation workflows, or AI-powered systems that meaningfully changed how a team operates.</p>
