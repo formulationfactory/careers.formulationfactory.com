@@ -9,11 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'Switzer';
-      src: url('https://api.fontshare.com/v2/css?f[]=switzer@600,700,800&display=swap');
-    }
-
     :root {
       --gold: #c9a84c;
       --gold-light: #b8983f;
@@ -66,17 +61,14 @@
     }
 
     .nav-logo {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--text-primary);
+      display: flex;
+      align-items: center;
       text-decoration: none;
     }
 
-    .nav-logo span {
-      color: var(--gold);
+    .nav-logo img {
+      height: 28px;
+      width: auto;
     }
 
     .nav-links {
@@ -268,7 +260,7 @@
 
     .culture-triangle {
       width: 100%;
-      max-width: 480px;
+      max-width: 600px;
       height: auto;
     }
 
@@ -573,7 +565,7 @@
       .culture-section { padding: 80px 24px; }
 
       .triangle-container { margin-bottom: 48px; }
-      .culture-triangle { max-width: 320px; }
+      .culture-triangle { max-width: 400px; }
 
       .pillar-grid {
         grid-template-columns: 1fr;
@@ -613,9 +605,9 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="https://formulationfactory.com" class="nav-logo">FORMULATION <span>FACTORY</span></a>
+    <a href="https://formulationfactory.com" class="nav-logo"><img src="https://formulationfactory.com/cdn/shop/files/FORMULATION-FACTORY-LOGO-Text-w-SubMark-Separator-BLACK.webp?v=1770917735&width=520" alt="Formulation Factory"></a>
     <div class="nav-links">
-      <a href="https://formulationfactory.com/pages/our-story">Our Story</a>
+      <a href="https://formulationfactory.com/pages/about">Our Story</a>
       <a href="https://formulationfactory.com/collections/all-1">Shop</a>
       <a href="#open-roles" class="nav-cta">Open Roles</a>
     </div>
@@ -646,24 +638,26 @@
 
     <!-- TRIANGLE GRAPHIC -->
     <div class="triangle-container">
-      <svg class="culture-triangle" viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
+      <svg class="culture-triangle" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#d4b96a"/>
             <stop offset="100%" stop-color="#c9a84c"/>
           </linearGradient>
         </defs>
-        <polygon points="300,40 540,480 60,480" fill="url(#goldGrad)"/>
-        <!-- FF logo mark -->
-        <rect x="262" y="260" width="76" height="76" fill="none" stroke="#1a1a1a" stroke-width="3"/>
-        <text x="300" y="312" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="36" fill="#1a1a1a">FF</text>
-        <!-- Labels -->
-        <text x="300" y="22" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Radical Honesty</text>
-        <text x="300" y="42" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#c9a84c">CHARACTER</text>
-        <text x="90" y="510" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Relentless Drive</text>
-        <text x="90" y="530" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#c9a84c">EXECUTION</text>
-        <text x="510" y="510" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Selfless Service</text>
-        <text x="510" y="530" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#c9a84c">PURPOSE</text>
+        <!-- Top label -->
+        <text x="400" y="28" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Radical Honesty</text>
+        <text x="400" y="50" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#c9a84c">CHARACTER</text>
+        <!-- Triangle -->
+        <polygon points="400,80 640,520 160,520" fill="url(#goldGrad)"/>
+        <!-- FF logo placeholder — replace href with your uploaded logo -->
+        <image href="https://formulationfactory.com/cdn/shop/files/FORMULATION-FACTORY-LOGO-Sub-Mark-BLACK.png?v=1770917735&width=200" x="358" y="270" width="84" height="84" />
+        <!-- Bottom-left label -->
+        <text x="160" y="560" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Relentless Drive</text>
+        <text x="160" y="582" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#c9a84c">EXECUTION</text>
+        <!-- Bottom-right label -->
+        <text x="640" y="560" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Selfless Service</text>
+        <text x="640" y="582" text-anchor="middle" font-family="'DM Sans', sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#c9a84c">PURPOSE</text>
       </svg>
     </div>
 
@@ -759,50 +753,45 @@
     </p>
 
     <div class="roles-list">
-      <!-- ════════════════════════════════════════
-           ROLE TEMPLATE — duplicate this block 
-           for each new position, update the 
-           title, description, tags, and href.
-           ════════════════════════════════════════ -->
-      <a class="role-card" href="mailto:careers@formulationfactory.com?subject=Application: Senior Media Buyer">
+      <a class="role-card" href="./coo.html">
         <div class="role-info">
-          <h3>Senior Media Buyer</h3>
-          <p>Scale paid acquisition across Meta, TikTok, and YouTube. You'll own the full funnel from creative testing to ROAS targets.</p>
+          <h3>Chief Operating Officer</h3>
+          <p>Own day-to-day execution across every function — growth, operations, Amazon, DTC, finance, supply chain, and team. This is a co-founder-level operator role.</p>
         </div>
         <div class="role-tags">
-          <span class="role-tag">Marketing</span>
-          <span class="role-tag">Remote</span>
+          <span class="role-tag">Executive</span>
+          <span class="role-tag">Remote (U.S.)</span>
           <span class="role-tag">Full-Time</span>
         </div>
         <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
       </a>
 
-      <a class="role-card" href="mailto:careers@formulationfactory.com?subject=Application: UGC / Creative Strategist">
+      <a class="role-card" href="./head-of-tiktok.html">
         <div class="role-info">
-          <h3>UGC / Creative Strategist</h3>
-          <p>Develop and manage the creative pipeline — scripts, creators, hooks. You understand what stops the scroll and drives conversion.</p>
+          <h3>Head of TikTok</h3>
+          <p>Own the entire TikTok ecosystem — organic channel, TikTok Shop, affiliate and creator network, and paid dark post pipeline. A channel GM role with revenue accountability.</p>
         </div>
         <div class="role-tags">
-          <span class="role-tag">Creative</span>
-          <span class="role-tag">Remote</span>
-          <span class="role-tag">Contract</span>
+          <span class="role-tag">Growth</span>
+          <span class="role-tag">Remote (U.S.)</span>
+          <span class="role-tag">Full-Time</span>
         </div>
         <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
       </a>
 
-      <a class="role-card" href="mailto:careers@formulationfactory.com?subject=Application: Ecommerce Developer (Shopify)">
+      <a class="role-card" href="./head-of-social.html">
         <div class="role-info">
-          <h3>Ecommerce Developer</h3>
-          <p>Own the Shopify storefront — landing pages, conversion optimization, custom Liquid/HTML sections. Pixel-level attention to detail required.</p>
+          <h3>Head of Social Media</h3>
+          <p>Own organic publishing across every major platform. A volume operator role — you ship content relentlessly and treat organic social as a serious commercial lever.</p>
         </div>
         <div class="role-tags">
-          <span class="role-tag">Engineering</span>
-          <span class="role-tag">Remote</span>
-          <span class="role-tag">Contract</span>
+          <span class="role-tag">Marketing</span>
+          <span class="role-tag">Remote (LatAm / Americas)</span>
+          <span class="role-tag">Full-Time</span>
         </div>
         <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
       </a>
-      <!-- ════ END ROLE TEMPLATE ════ -->
+    </div>
     </div>
 
     <!-- UNCOMMENT THIS BLOCK AND REMOVE THE ROLES ABOVE IF NO POSITIONS ARE OPEN
@@ -833,7 +822,7 @@
     <p>&copy; 2026 Formulation Factory LLC. All rights reserved.</p>
     <div class="footer-links">
       <a href="https://formulationfactory.com">Shop</a>
-      <a href="https://formulationfactory.com/pages/our-story">Our Story</a>
+      <a href="https://formulationfactory.com/pages/about">Our Story</a>
       <a href="https://www.instagram.com/formulationfactory" target="_blank">Instagram</a>
       <a href="https://www.tiktok.com/@formulationfactory" target="_blank">TikTok</a>
     </div>
