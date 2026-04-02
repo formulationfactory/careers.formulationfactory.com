@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Head of Social Media | Careers | Formulation Factory</title>
-  <meta name="description" content="Join Formulation Factory as Head of Social Media. Own organic publishing across every major platform with volume, consistency, and brand fidelity.">
+  <meta name="description" content="Join Formulation Factory as Head of Social Media. Create content, direct creative, manage high-volume publishing, and build an organic audience that drives real results.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -35,22 +35,31 @@
     .jd-back svg { width: 16px; height: 16px; }
     .jd-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
     .jd-meta-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.5px; padding: 6px 16px; border: 1px solid rgba(201,168,76,0.35); color: #a8893c; }
-    .jd-title { font-weight: 700; font-size: clamp(36px,5vw,52px); line-height: 1.1; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 16px; }
-    .jd-subtitle { font-size: 18px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 48px; max-width: 640px; }
+    .jd-title { font-weight: 700; font-size: clamp(36px,5vw,52px); line-height: 1.1; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 8px; }
+    .jd-updated { font-size: 13px; color: var(--text-tertiary); font-style: italic; margin-bottom: 16px; }
     .jd-detail-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--border); }
     .jd-detail-item label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
     .jd-detail-item p { font-size: 15px; font-weight: 500; color: var(--text-primary); }
     .jd-section { margin-bottom: 56px; }
     .jd-section-label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
-    .jd-section h3 { font-weight: 700; font-size: 20px; color: var(--text-primary); margin-bottom: 16px; letter-spacing: -0.3px; }
     .jd-section p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px; }
     .jd-section p strong { color: var(--text-primary); }
     .jd-section ul { list-style: none; padding: 0; }
     .jd-section ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
-    .jd-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
-    .jd-accountability { background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); padding: 32px; margin-bottom: 12px; }
-    .jd-accountability h4 { font-weight: 600; font-size: 16px; color: var(--text-primary); margin-bottom: 10px; }
-    .jd-accountability p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin: 0; }
+    .jd-section ul li::before { content: '-'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .jd-mission { font-size: 18px; line-height: 1.7; color: var(--text-primary); font-weight: 500; margin-bottom: 16px; }
+
+    .milestone { margin-bottom: 32px; }
+    .milestone-header { font-weight: 700; font-size: 17px; color: var(--text-primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .milestone ul { list-style: none; padding: 0; }
+    .milestone ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .milestone ul li::before { content: '-'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .milestone ul li strong { color: var(--text-primary); }
+
+    .competency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .competency-item { font-size: 15px; line-height: 1.7; color: var(--text-secondary); padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .competency-item strong { color: var(--text-primary); display: block; margin-bottom: 2px; }
+
     .jd-apply-section { margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--border); text-align: center; }
     .jd-apply-section p { font-size: 17px; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.7; }
     .jd-apply-btn { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 18px 48px; text-decoration: none; transition: all 0.3s ease; }
@@ -63,11 +72,9 @@
     .footer-links a:hover { color: var(--gold); }
 
     @media (max-width: 700px) {
-      .nav { padding: 16px 24px; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .jd-container { padding: 120px 24px 60px; }
-      .jd-detail-row { grid-template-columns: 1fr; gap: 20px; }
-      .jd-accountability { padding: 24px; }
+      .nav { padding: 16px 24px; } .nav-links a:not(.nav-cta) { display: none; }
+      .jd-container { padding: 120px 24px 60px; } .jd-detail-row { grid-template-columns: 1fr; gap: 20px; }
+      .competency-grid { grid-template-columns: 1fr; }
       .footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
     }
   </style>
@@ -91,83 +98,171 @@
     </a>
 
     <div class="jd-meta">
-      <span class="jd-meta-tag">Marketing</span>
-      <span class="jd-meta-tag">Remote (LatAm / Americas)</span>
+      <span class="jd-meta-tag">Social / Creative</span>
+      <span class="jd-meta-tag">Remote (U.S. Only)</span>
       <span class="jd-meta-tag">Full-Time</span>
     </div>
 
     <h1 class="jd-title">Head of Social Media</h1>
-    <p class="jd-subtitle">This is an operator role, not a strategy role. You will publish relentlessly, understand each platform at a native level, and serve as the connective tissue between our creative team and our audience.</p>
+    <p class="jd-updated">Last updated: April 2026</p>
 
     <div class="jd-detail-row">
       <div class="jd-detail-item">
         <label>Reports To</label>
-        <p>Brand Manager &amp; Head of Growth</p>
+        <p>Director of eCommerce</p>
       </div>
       <div class="jd-detail-item">
         <label>Location</label>
-        <p>Remote (LatAm / Americas TZ preferred)</p>
+        <p>Remote (U.S. only)</p>
       </div>
       <div class="jd-detail-item">
         <label>Compensation</label>
-        <p>$35K–$55K base | $45K–$70K total comp</p>
+        <p>$80K base + performance bonus</p>
       </div>
     </div>
 
+    <!-- MISSION -->
     <div class="jd-section">
-      <div class="jd-section-label">Role Purpose</div>
-      <p>The Head of Social Media owns Formulation Factory's organic presence across every major platform. Your mandate is volume, consistency, and brand fidelity — shipping platform-optimized content at a pace that keeps us top-of-mind in a category where attention is everything.</p>
-      <p>You will work directly with the Creative Strategist and content writers to turn briefs into published content. You will not be handed a fully built machine — you will help build it. The expectation is that you are self-directed, systems-minded, and obsessed with the details of how content performs on each individual platform.</p>
+      <div class="jd-section-label">Mission</div>
+      <p class="jd-mission">Own Formulation Factory's organic social presence across every platform - <strong>creating content, directing creative, managing high-volume publishing, and building an audience that trusts us</strong> - so organic social becomes a real revenue and brand-building lever, not an afterthought.</p>
     </div>
 
+    <!-- ROLE CONTEXT -->
     <div class="jd-section">
-      <div class="jd-section-label">Core Accountabilities</div>
-      <div class="jd-accountability">
-        <h4>1. Platform Ownership</h4>
-        <p>Full ownership of publishing across Instagram, TikTok, Facebook, YouTube Shorts, Pinterest, and X. You manage the scheduling pipeline in Hootsuite or equivalent, maintain a content calendar 2–3 weeks in advance across all channels, and ensure no platform goes dark. Volume is the baseline — quality and accuracy are non-negotiable on top of it.</p>
+      <div class="jd-section-label">Role Context</div>
+      <p>This is not a "post and monitor mentions" role. You are a content creator and creative strategist who also happens to be a volume publishing operator. You ideate content, script it, create it yourself, direct others to create it, and then ensure it ships across every platform at a pace that keeps us top-of-mind in a category where attention is everything.</p>
+      <p>You'll work hand-in-hand with the Creative Strategist and creative team to produce organic, value-add content - educational, authority-building, and community-driven. But you're not waiting for briefs to land in your inbox. You're bringing ideas, creating assets, using AI tools to move faster, and pushing the pipeline forward yourself.</p>
+      <p>You understand each platform at a native level - what works on TikTok is not what works on Pinterest. You adapt content without being told to. You manage the scheduling tool, maintain the calendar, and ensure no platform goes dark. Volume is the baseline - quality and brand accuracy are non-negotiable on top of it.</p>
+    </div>
+
+    <!-- SCORECARD: OUTCOMES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Outcomes</div>
+      <p>This is how we measure success. Not effort, not hours - outcomes with metrics and deadlines.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 30</div>
+        <ul>
+          <li><strong>Full platform audit complete:</strong> reviewed every active social channel (Instagram, TikTok, YouTube Shorts, X, Facebook, Pinterest). Documented current posting frequency, engagement rates, follower counts, top-performing content, and gaps.</li>
+          <li><strong>Scheduling tool set up and running:</strong> whether Publer, Hootsuite, Metricool, or equivalent - the publishing pipeline is operational. Content calendar is built 2-3 weeks in advance across all channels.</li>
+          <li><strong>Content audit delivered:</strong> reviewed all existing content assets (UGC, branded content, creator output, founder content). Identified what's working, what's not, and what's missing. Gap analysis presented to Director of eCommerce.</li>
+          <li><strong>AI toolkit established:</strong> identified and set up AI tools for content creation workflows - caption writing, thumbnail generation, video editing, repurposing long-form to short-form, etc. Demonstrating speed gains within the first month.</li>
+          <li><strong>Relationship with creative team established:</strong> integrated into creative workflow. Understands the briefing process, content pipeline, and creative strategy direction. Contributing ideas, not just receiving assignments.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>2. Content Collaboration</h4>
-        <p>Work hand-in-hand with the Creative Strategist and content writers to brief, review, and publish value-add content — educational, authority-building, and community-driven. You are the final step before content goes live: formatting, captioning, native optimization, and scheduling. You are also responsible for sourcing and repurposing UGC, athlete content, and creator output.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 60</div>
+        <ul>
+          <li><strong>Publishing at full velocity:</strong> all active channels publishing on consistent, high-frequency cadences. No platform goes dark. Volume targets met every week.</li>
+          <li><strong>Creating original content:</strong> you are producing original content yourself - scripting, shooting, editing, or directing. Not just repurposing existing assets. At least 3-5 original pieces per week created by you or under your direct creative direction.</li>
+          <li><strong>Platform-native adaptation live:</strong> each platform gets content optimized for its format - hook structure, caption length, hashtag strategy, posting time, trending formats. Not the same post copy-pasted everywhere.</li>
+          <li><strong>UGC and creator content pipeline running:</strong> sourcing, repurposing, and publishing UGC, athlete content, and creator output. Working with the creative team to brief and collect content from external sources.</li>
+          <li><strong>Community engagement rhythm established:</strong> comments and DMs managed daily across all platforms. Brand voice is consistent. High-value community members and organic advocates flagged to leadership.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>3. Platform-Native Adaptation</h4>
-        <p>What works on TikTok is not what works on Pinterest. What performs on Instagram Reels does not translate directly to YouTube Shorts. You understand these distinctions at a granular level — hook structure, caption length, hashtag behavior, posting cadence, trending formats — and you adapt content accordingly without being told to.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 90</div>
+        <ul>
+          <li><strong>Engagement rates above industry benchmarks:</strong> measurably above supplement category averages for engagement rate across at least 2 primary platforms.</li>
+          <li><strong>Content performance log running:</strong> a living database tracking which angles, hooks, formats, and content types drive measurable outcomes (engagement, followers, clicks, saves). Data informing the calendar going forward.</li>
+          <li><strong>Creative pipeline friction reduced:</strong> the creative team's output is being published faster and with less friction than before you joined. You are a force multiplier on their work, not a bottleneck.</li>
+          <li><strong>AI workflows producing results:</strong> at least 2-3 AI-powered workflows are saving meaningful time - content repurposing, caption generation, thumbnail creation, trend monitoring, or similar.</li>
+          <li><strong>Organic is driving measurable traffic:</strong> link clicks, profile visits, and DTC/Amazon referral traffic from organic social are tracked and growing week over week.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>4. Community and Engagement</h4>
-        <p>Manage comments and DMs across all platforms. Build genuine relationships with the audience, respond with the brand's voice, and flag high-value community members and organic advocates to the Brand Manager. You are the first to know when audience sentiment shifts and the first to report it.</p>
-      </div>
-      <div class="jd-accountability">
-        <h4>5. Performance Reporting</h4>
-        <p>Deliver a weekly social performance snapshot covering follower growth, reach, engagement rate, and top and bottom performing posts by platform. Maintain a living content performance log that captures which angles, hooks, and formats drive measurable outcomes. Use this data to inform the content calendar going forward.</p>
-      </div>
-      <div class="jd-accountability">
-        <h4>6. Brand Integrity</h4>
-        <p>Every piece of content that goes out carries the Formulation Factory name. We are a brand built on transparency, scientific accuracy, and earned trust. You must be fluent enough in health, supplementation, and fitness to catch errors before they publish — and rigorous enough to never let marketing language override factual truth.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 6</div>
+        <ul>
+          <li><strong>All channels growing:</strong> follower growth, reach, and engagement improving quarter over quarter across every active platform.</li>
+          <li><strong>Organic social is a real channel:</strong> not a branding afterthought. Organic is driving trackable revenue through profile link clicks, UTM-tagged content, and attributed traffic. Reported weekly alongside paid performance.</li>
+          <li><strong>Content machine is self-sustaining:</strong> calendar runs 3+ weeks ahead at all times. Publishing cadence doesn't break when you take a day off. The system works, not just the person.</li>
+          <li><strong>Director of eCommerce trusts the pipeline:</strong> organic social runs without daily oversight from leadership. You own it completely.</li>
+          <li><strong>Brand integrity maintained:</strong> zero compliance issues, zero bad health claims published, zero brand voice inconsistencies.</li>
+        </ul>
       </div>
     </div>
 
+    <!-- ONGOING KPIs -->
+    <div class="jd-section">
+      <div class="jd-section-label">Ongoing KPIs</div>
+      <p>Once the system is built, these are the numbers you own and review weekly. This is your scoreboard.</p>
+      <ul>
+        <li><strong>Publishing volume:</strong> total posts per week across all platforms. Target: consistent high-frequency output with no gaps.</li>
+        <li><strong>Engagement rate by platform:</strong> likes, comments, shares, saves relative to reach. Target: above supplement category benchmarks.</li>
+        <li><strong>Follower growth rate:</strong> net new followers per week/month across each platform.</li>
+        <li><strong>Content created per week:</strong> original pieces created by you or under your direct creative direction. Target: 3-5+ per week minimum.</li>
+        <li><strong>Organic traffic to site:</strong> link clicks and UTM-attributed sessions from organic social. Tracked weekly in revenue dashboard.</li>
+        <li><strong>Content calendar lead time:</strong> how far ahead the calendar is built. Target: 2-3 weeks minimum at all times.</li>
+        <li><strong>Community response time:</strong> average time to respond to DMs and comments across platforms.</li>
+        <li><strong>Top/bottom content report:</strong> weekly snapshot of top 3 and bottom 3 performing posts with analysis of why.</li>
+      </ul>
+    </div>
+
+    <!-- SCORECARD: COMPETENCIES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Competencies</div>
+      <p>Behavioral traits we interview against directly.</p>
+      <div class="competency-grid">
+        <div class="competency-item">
+          <strong>Creator and director</strong>
+          Can create content themselves AND direct others. Scripts, shoots, edits, or art-directs. Not a manager who delegates everything - a maker who also manages.
+        </div>
+        <div class="competency-item">
+          <strong>Volume operator</strong>
+          Understands that consistency and volume are non-negotiable. Can maintain high-frequency publishing across 5+ platforms without quality dropping.
+        </div>
+        <div class="competency-item">
+          <strong>Platform-native</strong>
+          Deeply understands each platform's algorithm, format, and audience behavior. Adapts content instinctively - never copy-pastes the same post everywhere.
+        </div>
+        <div class="competency-item">
+          <strong>AI-powered</strong>
+          Uses AI tools daily - for captions, editing, repurposing, trend spotting, thumbnail creation. Not experimenting with AI - deploying it to move faster.
+        </div>
+        <div class="competency-item">
+          <strong>Creative strategist</strong>
+          Brings ideas, not just executes briefs. Understands what hooks work, what formats trend, and what content builds trust in the supplement space.
+        </div>
+        <div class="competency-item">
+          <strong>Brand guardian</strong>
+          Fluent enough in health, supplementation, and fitness to catch errors before they publish. Never lets marketing language override factual truth.
+        </div>
+        <div class="competency-item">
+          <strong>Data-informed</strong>
+          Uses content performance data to make decisions. Knows which angles, hooks, and formats drive results and doubles down on them.
+        </div>
+        <div class="competency-item">
+          <strong>Radical honesty</strong>
+          Pushes back with data. Flags what's not working. Says what needs to be said about content performance without sugarcoating.
+        </div>
+      </div>
+    </div>
+
+    <!-- BOUNDARIES -->
     <div class="jd-section">
       <div class="jd-section-label">Explicit Boundaries</div>
       <p>This role does not own:</p>
       <ul>
-        <li>Paid media strategy, ad creative, or media buying</li>
-        <li>Brand positioning or product philosophy — those decisions belong to the Founder</li>
-        <li>Creative strategy direction — you execute and optimize briefs, you don't set the direction</li>
+        <li>Paid media strategy, ad creative for paid campaigns, or media buying - that belongs to the revenue function</li>
+        <li>Product vision, formulation philosophy, or brand worldview - those belong to the Founder</li>
+        <li>Creative strategy direction for paid channels - you own organic, you collaborate on paid</li>
         <li>Influencer contracting or partnership negotiation</li>
-        <li>Final sign-off on campaign strategy or channel expansion decisions</li>
       </ul>
-      <p>You are expected to bring platform-level insight and flag opportunities proactively. Execution excellence is your ownership, not direction-setting.</p>
+      <p><strong>You own organic social end to end.</strong> Publishing, content creation, community, scheduling, performance reporting, and the creative output that feeds all of it. You bring platform-level insight and flag opportunities proactively.</p>
     </div>
 
+    <!-- DECISION RIGHTS -->
     <div class="jd-section">
-      <div class="jd-section-label">Decision Rights &amp; Key Interfaces</div>
-      <p><strong>Owns:</strong> All publishing decisions, scheduling, platform-level formatting, community responses, and performance reporting within content approved by the creative team.</p>
-      <p><strong>Reports to:</strong> Brand Manager and Head of Growth for strategic alignment; Founder for brand voice questions.</p>
-      <p><strong>Collaborates closely with:</strong> Creative Strategist on content briefs and campaign planning, Content Writers on caption and copy review, Head of Growth on coordination with paid media, and CX Lead on community escalations.</p>
+      <div class="jd-section-label">Decision Rights</div>
+      <p><strong>Owns:</strong> All organic social publishing, content creation and creative direction for organic, scheduling tool management, content calendar, community engagement, UGC sourcing and repurposing, AI content workflows, and organic social performance reporting.</p>
+      <p><strong>Reports to:</strong> Director of eCommerce.</p>
+      <p><strong>Collaborates with:</strong> Creative Strategist on content briefs and campaign planning, creative team on asset production, CX on community escalations, and Founder on brand voice direction.</p>
     </div>
 
+    <!-- THIS ROLE IS NOT -->
     <div class="jd-section">
       <div class="jd-section-label">This Role Is Not</div>
       <ul>
@@ -175,35 +270,29 @@
         <li>A strategist who builds decks about what we should post someday</li>
         <li>A coordinator who waits for content to land in their inbox before acting</li>
         <li>A generalist marketer with social as one of five responsibilities</li>
+        <li>Someone who can't create content themselves and only manages others</li>
       </ul>
-      <p>This is a volume operator who lives in the platforms, ships content relentlessly, and treats organic social as a serious commercial lever — not a branding afterthought.</p>
+      <p>This is a creator-operator who lives in the platforms, makes content, directs content, ships it relentlessly, and treats organic social as a serious commercial lever.</p>
     </div>
 
-    <div class="jd-section">
-      <div class="jd-section-label">Year-One Success Profile</div>
-      <ul>
-        <li>All active channels are publishing on consistent, high-frequency cadences with no gaps</li>
-        <li>A content calendar system is built and running 3+ weeks ahead at all times</li>
-        <li>Platform-specific performance benchmarks are established and improving quarter over quarter</li>
-        <li>The creative team's output is being published faster and with less friction than before this person joined</li>
-        <li>Community engagement rates are measurably above industry benchmarks for the supplement category</li>
-        <li>The Brand Manager and Head of Growth trust the social pipeline to run without daily oversight</li>
-      </ul>
-    </div>
-
+    <!-- IDEAL CANDIDATE -->
     <div class="jd-section">
       <div class="jd-section-label">Ideal Candidate</div>
       <ul>
-        <li>2–4+ years managing organic social for a consumer brand — supplement, fitness, wellness, or health-adjacent strongly preferred</li>
-        <li>Genuine working knowledge of health, supplementation, biohacking, and fitness; you can speak intelligently about ingredients, protocols, and the science behind them without being coached</li>
-        <li>Proven volume operator who has managed multi-platform, high-frequency publishing pipelines and has the scheduling tool experience to prove it</li>
-        <li>Proficient in Hootsuite, Later, Buffer, or equivalent — you've built workflows, not just used them</li>
-        <li>Platform-native across at least three major channels with a clear understanding of the algorithmic and format differences between them</li>
-        <li>Strong writer — captions, hooks, and CTAs that sound like a smart human who respects the audience's intelligence</li>
-        <li>High standard for factual accuracy — in this brand, a bad health claim is a brand integrity failure, not a typo</li>
+        <li>2-5 years managing organic social for a consumer brand - supplement, fitness, wellness, or health-adjacent strongly preferred</li>
+        <li>Proven content creator - you have a portfolio of content you've made yourself. Not just managed, made.</li>
+        <li>Experience with scheduling and publishing tools (Publer, Hootsuite, Metricool, Later, Buffer, or equivalent) - you've built workflows, not just used them</li>
+        <li>Platform-native across at least 3 major channels with a clear understanding of algorithmic and format differences</li>
+        <li>Strong writer - captions, hooks, and CTAs that sound like a smart human who respects the audience's intelligence</li>
+        <li>Proficient with AI tools for content creation - ChatGPT, Claude, Canva AI, CapCut, Opus Clip, or similar. You use these daily, not occasionally</li>
+        <li>Genuine working knowledge of health, supplementation, and fitness - you can speak intelligently about ingredients and protocols without being coached</li>
+        <li>High standard for factual accuracy - in this brand, a bad health claim is a brand integrity failure, not a typo</li>
+        <li>U.S.-based - this is a U.S.-only hire</li>
       </ul>
+      <p><strong>Bonus:</strong> You've grown a brand's organic social from minimal presence to a real audience. You've built the content machine, not just inherited one.</p>
     </div>
 
+    <!-- APPLY -->
     <div class="jd-apply-section">
       <p>If this sounds like you, we want to hear from you.</p>
       <a href="mailto:careers@formulationfactory.com?subject=Application: Head of Social Media" class="jd-apply-btn">Apply for This Role</a>

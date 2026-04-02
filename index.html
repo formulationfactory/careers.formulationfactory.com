@@ -4,237 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers | Formulation Factory</title>
-  <meta name="description" content="Join Formulation Factory — we're building the most transparent supplement brand on the planet. See open roles and apply.">
+  <meta name="description" content="Join Formulation Factory - we're building a supplement brand with a mission to make a real dent in the mental health crisis. See open roles.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gold: #c9a84c;
-      --gold-light: #b8983f;
-      --bg: #faf9f7;
-      --bg-card: #ffffff;
-      --bg-elevated: #f5f4f1;
-      --dark: #1a1a1a;
-      --text-primary: #1a1a1a;
-      --text-secondary: #5a5a5a;
-      --text-tertiary: #8a8a8a;
-      --border: rgba(26, 26, 26, 0.08);
-      --border-hover: rgba(26, 26, 26, 0.15);
+      --gold: #c9a84c; --gold-light: #b8983f;
+      --bg: #faf9f7; --bg-card: #ffffff; --bg-elevated: #f5f4f1;
+      --dark: #1a1a1a; --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a; --text-tertiary: #8a8a8a;
+      --border: rgba(26, 26, 26, 0.08); --border-hover: rgba(26, 26, 26, 0.15);
     }
-
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
     body { font-family: 'DM Sans', sans-serif; background-color: var(--bg); color: var(--text-primary); line-height: 1.6; }
 
-    /* ── NAV ── */
-    .nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 16px 40px;
-      display: flex; justify-content: space-between; align-items: center;
-      background: rgba(250, 249, 247, 0.9);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(250,249,247,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-logo img { height: 42px; width: auto; }
     .nav-links { display: flex; gap: 28px; align-items: center; }
-    .nav-links a {
-      font-size: 13px; font-weight: 500; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--text-secondary);
-      text-decoration: none; transition: color 0.3s ease;
-    }
+    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease; }
     .nav-links a:hover { color: var(--gold); }
-    .nav-links a.nav-cta {
-      color: #ffffff; background: var(--dark);
-      padding: 10px 24px; font-weight: 600; transition: background 0.3s ease;
-    }
+    .nav-links a.nav-cta { color: #ffffff; background: var(--dark); padding: 10px 24px; font-weight: 600; transition: background 0.3s ease; }
     .nav-links a.nav-cta:hover { background: #2a2a2a; }
 
-    /* ── LAYOUT ── */
     .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
 
-    /* ── HERO ── */
-    .hero {
-      padding: 100px 0 48px;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 600; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-weight: 700; font-size: clamp(36px, 5.5vw, 64px);
-      line-height: 1.08; letter-spacing: -1.5px;
-      color: var(--text-primary); margin-bottom: 16px;
-    }
+    .hero { padding: 100px 0 48px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .hero h1 { font-weight: 700; font-size: clamp(36px, 5.5vw, 64px); line-height: 1.08; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 16px; }
     .hero h1 em { font-style: italic; color: var(--gold); }
-    .hero-sub {
-      font-size: 17px; line-height: 1.7; color: var(--text-secondary);
-      max-width: 540px; margin: 0 auto 32px;
-    }
-    .hero-cta {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 13px; font-weight: 600; letter-spacing: 2px;
-      text-transform: uppercase; color: #ffffff; background: var(--dark);
-      padding: 14px 36px; text-decoration: none; transition: all 0.3s ease;
-    }
+    .hero-sub { font-size: 17px; line-height: 1.7; color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; background: var(--dark); padding: 14px 36px; text-decoration: none; transition: all 0.3s ease; }
     .hero-cta:hover { background: #2a2a2a; }
     .hero-cta svg { width: 14px; height: 14px; }
 
     /* VIDEO PLACEHOLDER */
     .video-section { padding: 0 0 48px; }
-    .video-placeholder {
-      width: 100%; aspect-ratio: 16/9;
-      background: var(--dark); border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      position: relative; overflow: hidden;
-    }
+    .video-placeholder { width: 100%; aspect-ratio: 16/9; background: var(--dark); border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .video-placeholder svg { width: 64px; height: 64px; opacity: 0.3; color: #fff; }
 
-    /* ── DIVIDER ── */
-    .divider hr {
-      border: none; height: 1px;
-      background: linear-gradient(to right, transparent, var(--border-hover), transparent);
-    }
+    .divider hr { border: none; height: 1px; background: linear-gradient(to right, transparent, var(--border-hover), transparent); }
 
-    /* ── SECTION SHARED ── */
     .section { padding: 56px 0; }
-    .section-label {
-      font-size: 11px; font-weight: 600; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
-    }
-    .section-title {
-      font-weight: 700; font-size: clamp(26px, 3.5vw, 36px);
-      line-height: 1.15; letter-spacing: -0.5px;
-      color: var(--text-primary); margin-bottom: 16px;
-    }
-    .section-desc {
-      font-size: 16px; line-height: 1.7; color: var(--text-secondary);
-      max-width: none; margin-bottom: 40px;
-    }
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .section-title { font-weight: 700; font-size: clamp(26px, 3.5vw, 36px); line-height: 1.15; letter-spacing: -0.5px; color: var(--text-primary); margin-bottom: 16px; }
+    .section-desc { font-size: 16px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 40px; }
 
-    /* ── ORIGIN STORY ── */
-    .story-grid {
-      display: flex; flex-direction: column; gap: 32px;
-    }
-    .story-text p {
-      font-size: 15px; line-height: 1.8; color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
+    /* CRISIS STATS */
+    .crisis-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 40px; }
+    .crisis-stat { background: var(--bg-card); border: 1px solid var(--border); padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); text-align: center; }
+    .crisis-stat .stat-num { font-weight: 700; font-size: 28px; letter-spacing: -1px; color: var(--text-primary); margin-bottom: 4px; }
+    .crisis-stat .stat-label { font-size: 13px; color: var(--text-secondary); line-height: 1.4; }
+
+    /* STORY */
+    .story-grid { display: flex; flex-direction: column; gap: 32px; }
+    .story-text p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px; }
     .story-text p strong { color: var(--text-primary); }
     .story-text p:last-child { margin-bottom: 0; }
     .story-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .stat-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    }
-    .stat-card .stat-num {
-      font-weight: 700; font-size: 28px; letter-spacing: -1px;
-      color: var(--text-primary); margin-bottom: 4px;
-    }
+    .stat-card { background: var(--bg-card); border: 1px solid var(--border); padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .stat-card .stat-num { font-weight: 700; font-size: 28px; letter-spacing: -1px; color: var(--text-primary); margin-bottom: 4px; }
     .stat-card .stat-label { font-size: 13px; color: var(--text-secondary); line-height: 1.4; }
 
-    /* ── CULTURE / TRIANGLE ── */
+    /* CULTURE */
     .triangle-container { display: flex; justify-content: center; margin-bottom: 48px; }
     .culture-triangle { width: 100%; max-width: 520px; height: auto; }
-
     .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .pillar-card {
-      background: var(--bg-card); padding: 28px 24px;
-      border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      position: relative; transition: all 0.3s ease;
-    }
-    .pillar-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 3px; background: var(--gold);
-      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
-    }
+    .pillar-card { background: var(--bg-card); padding: 28px 24px; border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); position: relative; transition: all 0.3s ease; }
+    .pillar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
     .pillar-card:hover::before { transform: scaleX(1); }
     .pillar-card:hover { border-color: var(--border-hover); }
-    .pillar-tag {
-      display: inline-block; font-size: 10px; font-weight: 600;
-      letter-spacing: 2.5px; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 8px;
-    }
-    .pillar-card h3 {
-      font-weight: 700; font-size: 18px;
-      color: var(--text-primary); letter-spacing: -0.3px; margin-bottom: 12px;
-    }
+    .pillar-tag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .pillar-card h3 { font-weight: 700; font-size: 18px; color: var(--text-primary); letter-spacing: -0.3px; margin-bottom: 12px; }
     .pillar-card p { font-size: 14px; line-height: 1.75; color: var(--text-secondary); }
 
-    /* ── PERKS ── */
+    /* PERKS */
     .perks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .perk-item {
-      display: flex; align-items: flex-start; gap: 12px;
-      padding: 20px; background: var(--bg-card);
-      border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      transition: border-color 0.3s ease;
-    }
+    .perk-item { display: flex; align-items: flex-start; gap: 12px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: border-color 0.3s ease; }
     .perk-item:hover { border-color: var(--border-hover); }
     .perk-icon { flex-shrink: 0; width: 18px; height: 18px; color: var(--gold); margin-top: 1px; }
     .perk-item h4 { font-weight: 600; font-size: 14px; color: var(--text-primary); margin-bottom: 2px; }
     .perk-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
 
-    /* ── ROLES ── */
+    /* ROLES */
     .roles-list { display: flex; flex-direction: column; gap: 2px; }
-    .role-card {
-      display: grid; grid-template-columns: 1fr auto auto;
-      align-items: center; gap: 32px; padding: 24px 28px;
-      background: var(--bg-card); border: 1px solid var(--border);
-      text-decoration: none; transition: all 0.3s ease; cursor: pointer;
-    }
+    .role-card { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 32px; padding: 24px 28px; background: var(--bg-card); border: 1px solid var(--border); text-decoration: none; transition: all 0.3s ease; cursor: pointer; }
     .role-card:hover { background: var(--bg-elevated); border-color: var(--border-hover); }
     .role-info h3 { font-weight: 600; font-size: 17px; color: var(--text-primary); margin-bottom: 4px; }
     .role-info p { font-size: 14px; color: var(--text-secondary); }
     .role-tags { display: flex; gap: 8px; flex-shrink: 0; }
-    .role-tag {
-      font-size: 11px; font-weight: 500; letter-spacing: 0.5px;
-      padding: 5px 12px; border: 1px solid rgba(201,168,76,0.35); color: #a8893c;
-    }
+    .role-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.5px; padding: 5px 12px; border: 1px solid rgba(201,168,76,0.35); color: #a8893c; }
     .role-arrow { color: var(--text-tertiary); transition: all 0.3s ease; }
     .role-card:hover .role-arrow { color: var(--gold); transform: translateX(4px); }
 
-    /* ── CTA ── */
     .cta-section { text-align: center; padding: 56px 0 80px; }
     .cta-section .section-title { max-width: 500px; margin: 0 auto 12px; }
     .cta-section .section-desc { max-width: 440px; margin: 0 auto 32px; text-align: center; }
-    .cta-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 13px; font-weight: 600; letter-spacing: 2px;
-      text-transform: uppercase; color: #ffffff; background: var(--dark);
-      padding: 14px 40px; text-decoration: none; transition: all 0.3s ease;
-    }
+    .cta-btn { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; background: var(--dark); padding: 14px 40px; text-decoration: none; transition: all 0.3s ease; }
     .cta-btn:hover { background: #2a2a2a; }
 
-    /* ── FOOTER ── */
-    .footer {
-      padding: 36px 40px; max-width: 1000px; margin: 0 auto;
-      display: flex; justify-content: space-between; align-items: center;
-      border-top: 1px solid var(--border);
-    }
+    .footer { padding: 36px 40px; max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
     .footer p { font-size: 13px; color: var(--text-tertiary); }
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a {
-      font-size: 13px; color: var(--text-tertiary);
-      text-decoration: none; transition: color 0.3s ease;
-    }
+    .footer-links a { font-size: 13px; color: var(--text-tertiary); text-decoration: none; transition: color 0.3s ease; }
     .footer-links a:hover { color: var(--gold); }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 800px) {
-      .nav { padding: 12px 20px; }
-      .nav-links a:not(.nav-cta) { display: none; }
+      .nav { padding: 12px 20px; } .nav-links a:not(.nav-cta) { display: none; }
       .container { padding: 0 20px; }
       .hero { padding: 90px 0 36px; }
       .section { padding: 40px 0; }
+      .crisis-stats { grid-template-columns: 1fr 1fr; }
       .story-stats { grid-template-columns: 1fr 1fr; }
       .pillar-grid { grid-template-columns: 1fr; gap: 12px; }
       .perks-grid { grid-template-columns: 1fr; }
       .role-card { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
-      .role-tags { flex-wrap: wrap; }
-      .role-arrow { display: none; }
+      .role-tags { flex-wrap: wrap; } .role-arrow { display: none; }
       .footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 20px; }
     }
   </style>
@@ -256,14 +143,14 @@
     <div class="hero">
       <div class="hero-badge">We're Hiring</div>
       <h1>Build something<br><em>life changing</em><br>with us.</h1>
-      <p class="hero-sub">If you're in it just for the paycheck, don't apply. If you're in it to be remembered, to be proud of what you built, to be known for something that mattered — let's ride.</p>
+      <p class="hero-sub">If you're in it just for the paycheck, don't apply. If you're in it to be remembered, to be proud of what you built, to be known for something that mattered - let's ride.</p>
       <a href="#open-roles" class="hero-cta">
         View Open Roles
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
       </a>
     </div>
 
-    <!-- VIDEO — uncomment when ready
+    <!-- VIDEO - uncomment when ready
     <div class="video-section">
       <div class="video-placeholder">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -273,34 +160,63 @@
 
     <div class="divider"><hr></div>
 
-    <!-- ORIGIN STORY -->
+    <!-- MENTAL HEALTH MISSION -->
     <div class="section">
-      <div class="section-label">How We Got Here</div>
-      <h2 class="section-title">It started with a crash.</h2>
-      <div class="story-grid">
-        <div class="story-text">
-          <p>In 2005, our founder Kyle drove an ATV off a cliff at 65 mph. Three brain bleeds. Nine days in the hospital. Years of therapy. His testosterone came back at sub-200 ng/dL — lower than the average 80-year-old. The healthcare system had nothing for him.</p>
-          <p>What followed was over a decade of obsessive self-experimentation. Every ingredient. Every dosage. Every mechanism of action — tested on himself first. He went from sub-200 to over 800 ng/dL. <strong>Without TRT.</strong></p>
-          <p>He started giving baggies of his custom blends to friends. They kept coming back. Then their friends came. The turning point came when he saw competitors launching testosterone boosters with underdosed ingredients he'd already tried and discarded years earlier.</p>
-          <p><strong>Formulation Factory launched in April 2024</strong> and grew to 12 SKUs generating over $13M in annual revenue — by making products that actually work and refusing to cut corners on what goes inside them.</p>
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">We're here to make a dent in the mental health crisis.</h2>
+      <p class="section-desc">Mental health in America is deteriorating. The numbers aren't abstract - they're people. Our families, our friends, ourselves. We believe the supplement industry has a role to play, and most of it is failing that responsibility.</p>
+
+      <div class="crisis-stats">
+        <div class="crisis-stat">
+          <div class="stat-num">60M+</div>
+          <div class="stat-label">U.S. adults experience mental illness annually</div>
         </div>
-        <div class="story-stats">
-          <div class="stat-card">
-            <div class="stat-num">$13M+</div>
-            <div class="stat-label">Annual revenue</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">12</div>
-            <div class="stat-label">SKUs shipped</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">10,000+</div>
-            <div class="stat-label">Verified reviews</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">15 yrs</div>
-            <div class="stat-label">Of R&D before launch</div>
-          </div>
+        <div class="crisis-stat">
+          <div class="stat-num">1 in 10</div>
+          <div class="stat-label">Adults had a mental health crisis in the past year</div>
+        </div>
+        <div class="crisis-stat">
+          <div class="stat-num">46%</div>
+          <div class="stat-label">Of Gen Z have been diagnosed with a mental health condition</div>
+        </div>
+        <div class="crisis-stat">
+          <div class="stat-num">42.5M</div>
+          <div class="stat-label">Americans suffer from anxiety disorders</div>
+        </div>
+      </div>
+
+      <div class="story-text">
+        <p>Our founder knows this firsthand. At 17, Kyle drove an ATV off a cliff at 65 mph. Three brain bleeds. Nine days in the hospital. Years of therapy. But the physical injuries were only half of it. <strong>The mental health fallout was worse.</strong> Depression. Isolation. No desire to be around people. A version of himself he didn't recognize.</p>
+        <p>His testosterone came back at sub-200 ng/dL - lower than the average 80-year-old. The healthcare system had nothing for him. No real answers, no real solutions. So he started figuring it out himself - obsessively researching every ingredient, every mechanism, every dosage. Testing everything on his own body for over a decade.</p>
+        <p>He went from sub-200 to over 800 ng/dL. Without TRT. The depression lifted. The fog cleared. He got his life back - <strong>not through the system, but in spite of it.</strong></p>
+        <p>That's why Formulation Factory exists. Not to sell capsules. To give people the tools to take control of their own biology when the system won't do it for them. Every ingredient published. Every dose transparent. Every batch tested. Because the person on the other end deserves better than what this industry has been giving them.</p>
+      </div>
+    </div>
+
+    <div class="divider"><hr></div>
+
+    <!-- WHAT WE'VE BUILT -->
+    <div class="section">
+      <div class="section-label">What We've Built</div>
+      <h2 class="section-title">From a kitchen counter to $13M+ in annual revenue.</h2>
+      <p class="section-desc">Formulation Factory launched in April 2024. No VC money. No celebrity endorsements. Just products that work and a refusal to cut corners.</p>
+
+      <div class="story-stats">
+        <div class="stat-card">
+          <div class="stat-num">$13M+</div>
+          <div class="stat-label">Annual revenue</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">12</div>
+          <div class="stat-label">SKUs shipped</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10,000+</div>
+          <div class="stat-label">Verified reviews</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">15 yrs</div>
+          <div class="stat-label">Of R&D before launch</div>
         </div>
       </div>
     </div>
@@ -311,7 +227,7 @@
     <div class="section">
       <div class="section-label">Our Culture</div>
       <h2 class="section-title">The non-negotiables.</h2>
-      <p class="section-desc">Three pillars define who we are, who we hire, and how we build. They aren't aspirational — they're operational.</p>
+      <p class="section-desc">Three pillars define who we are, who we hire, and how we build. They aren't aspirational - they're operational.</p>
 
       <div class="triangle-container">
         <svg class="culture-triangle" viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg">
@@ -336,12 +252,12 @@
         <div class="pillar-card">
           <span class="pillar-tag">Character</span>
           <h3>Radical Honesty</h3>
-          <p>We say what needs to be said — to each other, to our partners, and to our customers. No hidden agendas, no softened truths, no gap between who you are publicly and privately. Integrity here isn't a policy, it's a hiring standard.</p>
+          <p>We say what needs to be said - to each other, to our partners, and to our customers. No hidden agendas, no softened truths, no gap between who you are publicly and privately. Integrity here isn't a policy, it's a hiring standard.</p>
         </div>
         <div class="pillar-card">
           <span class="pillar-tag">Execution</span>
           <h3>Relentless Drive</h3>
-          <p>We know who the best is in every role, every function, and every market we compete in — and we're coming for them. We move fast, execute with urgency, and treat speed as a competitive advantage. Anything short of #1 is unfinished work.</p>
+          <p>We know who the best is in every role, every function, and every market we compete in - and we're coming for them. We move fast, execute with urgency, and treat speed as a competitive advantage. Anything short of #1 is unfinished work.</p>
         </div>
         <div class="pillar-card">
           <span class="pillar-tag">Purpose</span>
@@ -360,45 +276,27 @@
       <div class="perks-grid">
         <div class="perk-item">
           <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
-          <div>
-            <h4>Work From Anywhere</h4>
-            <p>Fully remote. Your day, your schedule.</p>
-          </div>
+          <div><h4>Work From Anywhere</h4><p>Fully remote. Your day, your schedule.</p></div>
         </div>
         <div class="perk-item">
           <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <div>
-            <h4>Competitive Pay + Bonuses</h4>
-            <p>Performance-based. You grow it, you share in it.</p>
-          </div>
+          <div><h4>Competitive Pay + Bonuses</h4><p>Performance-based. You grow it, you share in it.</p></div>
         </div>
         <div class="perk-item">
           <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
-          <div>
-            <h4>Free Product</h4>
-            <p>Full access to the entire line.</p>
-          </div>
+          <div><h4>Free Product</h4><p>Full access to the entire line.</p></div>
         </div>
         <div class="perk-item">
           <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-          <div>
-            <h4>High-Impact Work</h4>
-            <p>Small team, big surface area. Your work ships to thousands.</p>
-          </div>
+          <div><h4>High-Impact Work</h4><p>Small team, big surface area. Your work ships to thousands.</p></div>
         </div>
         <div class="perk-item">
           <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
-          <div>
-            <h4>Growth Budget</h4>
-            <p>Books, courses, conferences — whatever sharpens your craft.</p>
-          </div>
+          <div><h4>Growth Budget</h4><p>Books, courses, conferences - whatever sharpens your craft.</p></div>
         </div>
         <div class="perk-item">
           <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"/></svg>
-          <div>
-            <h4>Flexible PTO</h4>
-            <p>Take the time you need. We trust you.</p>
-          </div>
+          <div><h4>Flexible PTO</h4><p>Take the time you need. We trust you.</p></div>
         </div>
       </div>
     </div>
@@ -426,18 +324,18 @@
         <a class="role-card" href="./director-of-ecommerce.html">
           <div class="role-info">
             <h3>Director of eCommerce</h3>
-            <p>Own the Shopify DTC storefront end-to-end — landing pages, CRO, email/SMS, subscriptions, and everything after the click.</p>
+            <p>Own all revenue-generating channels - Amazon, Shopify DTC, TikTok Shop, paid media, and creative strategy.</p>
           </div>
           <div class="role-tags">
-            <span class="role-tag">eCommerce</span>
-            <span class="role-tag">Remote</span>
+            <span class="role-tag">eCommerce / Revenue</span>
+            <span class="role-tag">Remote (U.S.)</span>
           </div>
           <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
         </a>
         <a class="role-card" href="./tiktok-brand-manager.html">
           <div class="role-info">
             <h3>TikTok Brand Manager</h3>
-            <p>Own the entire TikTok ecosystem — organic channel, TikTok Shop, affiliate and creator network, and paid dark post pipeline.</p>
+            <p>Own the entire TikTok ecosystem - organic channel, TikTok Shop, affiliate and creator network, and paid dark post pipeline.</p>
           </div>
           <div class="role-tags">
             <span class="role-tag">Growth</span>
@@ -452,7 +350,7 @@
           </div>
           <div class="role-tags">
             <span class="role-tag">Marketing</span>
-            <span class="role-tag">Remote (LatAm)</span>
+            <span class="role-tag">Remote (U.S.)</span>
           </div>
           <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
         </a>
