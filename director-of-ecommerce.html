@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Director of eCommerce | Careers | Formulation Factory</title>
-  <meta name="description" content="Join Formulation Factory as Director of eCommerce. Own the Shopify DTC storefront, conversion optimization, email/SMS, and subscription growth.">
+  <meta name="description" content="Join Formulation Factory as Director of eCommerce. Own all revenue-generating channels - Amazon, Shopify DTC, TikTok Shop, paid media, and creative strategy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -35,7 +35,8 @@
     .jd-back svg { width: 16px; height: 16px; }
     .jd-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
     .jd-meta-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.5px; padding: 6px 16px; border: 1px solid rgba(201,168,76,0.35); color: #a8893c; }
-    .jd-title { font-weight: 700; font-size: clamp(36px,5vw,52px); line-height: 1.1; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 16px; }
+    .jd-title { font-weight: 700; font-size: clamp(36px,5vw,52px); line-height: 1.1; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 8px; }
+    .jd-updated { font-size: 13px; color: var(--text-tertiary); font-style: italic; margin-bottom: 16px; }
     .jd-detail-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--border); }
     .jd-detail-item label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
     .jd-detail-item p { font-size: 15px; font-weight: 500; color: var(--text-primary); }
@@ -45,10 +46,20 @@
     .jd-section p strong { color: var(--text-primary); }
     .jd-section ul { list-style: none; padding: 0; }
     .jd-section ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
-    .jd-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
-    .jd-accountability { background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); padding: 32px; margin-bottom: 12px; }
-    .jd-accountability h4 { font-weight: 600; font-size: 16px; color: var(--text-primary); margin-bottom: 10px; }
-    .jd-accountability p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin: 0; }
+    .jd-section ul li::before { content: '-'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .jd-mission { font-size: 18px; line-height: 1.7; color: var(--text-primary); font-weight: 500; margin-bottom: 16px; }
+
+    .milestone { margin-bottom: 32px; }
+    .milestone-header { font-weight: 700; font-size: 17px; color: var(--text-primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .milestone ul { list-style: none; padding: 0; }
+    .milestone ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .milestone ul li::before { content: '-'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .milestone ul li strong { color: var(--text-primary); }
+
+    .competency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .competency-item { font-size: 15px; line-height: 1.7; color: var(--text-secondary); padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .competency-item strong { color: var(--text-primary); display: block; margin-bottom: 2px; }
+
     .jd-apply-section { margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--border); text-align: center; }
     .jd-apply-section p { font-size: 17px; color: var(--text-secondary); margin-bottom: 32px; line-height: 1.7; }
     .jd-apply-btn { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 18px 48px; text-decoration: none; transition: all 0.3s ease; }
@@ -63,7 +74,7 @@
     @media (max-width: 700px) {
       .nav { padding: 16px 24px; } .nav-links a:not(.nav-cta) { display: none; }
       .jd-container { padding: 120px 24px 60px; } .jd-detail-row { grid-template-columns: 1fr; gap: 20px; }
-      .jd-accountability { padding: 24px; }
+      .competency-grid { grid-template-columns: 1fr; }
       .footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
     }
   </style>
@@ -87,12 +98,13 @@
     </a>
 
     <div class="jd-meta">
-      <span class="jd-meta-tag">eCommerce</span>
-      <span class="jd-meta-tag">Remote</span>
+      <span class="jd-meta-tag">eCommerce / Revenue</span>
+      <span class="jd-meta-tag">Remote (U.S. Only)</span>
       <span class="jd-meta-tag">Full-Time</span>
     </div>
 
     <h1 class="jd-title">Director of eCommerce</h1>
+    <p class="jd-updated">Last updated: April 2026</p>
 
     <div class="jd-detail-row">
       <div class="jd-detail-item">
@@ -101,54 +113,138 @@
       </div>
       <div class="jd-detail-item">
         <label>Location</label>
-        <p>Remote (U.S. preferred)</p>
+        <p>Remote (U.S. only)</p>
       </div>
       <div class="jd-detail-item">
         <label>Compensation</label>
-        <p>$90K–$140K base + performance bonuses</p>
+        <p>$180K base + performance bonus</p>
       </div>
     </div>
 
     <!-- MISSION -->
     <div class="jd-section">
       <div class="jd-section-label">Mission</div>
-      <p style="font-size: 18px; line-height: 1.7; color: var(--text-primary); font-weight: 500;">Own the Shopify DTC storefront end-to-end — from landing pages to checkout to post-purchase — and turn it from a growing side channel into a high-converting, high-margin revenue engine that scales alongside paid media.</p>
+      <p class="jd-mission">Own all revenue-generating channels at Formulation Factory - <strong>Amazon, Shopify DTC, TikTok Shop, paid media, and creative strategy</strong> - and turn a $13M brand with a dominant Amazon channel into a diversified, multi-channel revenue engine scaling toward $20M+.</p>
     </div>
 
     <!-- ROLE CONTEXT -->
     <div class="jd-section">
       <div class="jd-section-label">Role Context</div>
-      <p>Formulation Factory does $13M+ ARR, with ~95% coming through Amazon. DTC is live on Shopify and growing, but it needs an owner. Someone who obsesses over conversion rate, builds landing pages that match the paid creative, wires up email and SMS flows that recover revenue and build LTV, and treats the storefront like a product — always iterating, always improving.</p>
-      <p>You'll work closely with the Head of Growth (who owns paid media) and the creative team (who produce the ads and UGC). Your job is everything that happens after the click — the landing page, the PDP, the cart, the upsell, the subscription flow, the post-purchase journey. When Growth wants to scale spend, your funnel is what makes that profitable.</p>
+      <p>Formulation Factory does $13M+ ARR. Amazon is already a machine - dialed in with a Brand Manager running day-to-day and a PPC agency managing ads. TikTok Shop is completely not set up. Shopify DTC is live but unoptimized for conversion - Klaviyo is minimally configured, landing pages need optimization, and there's no systematic funnel infrastructure connecting paid media to purchase.</p>
+      <p>This role owns the full revenue picture. You oversee Amazon (which is running), build out DTC and TikTok Shop (which are not), own paid media strategy and creative direction, and ensure every dollar spent on acquisition has a matching, optimized conversion experience on the other end.</p>
+      <p>You're technical enough to build landing pages in Shopify yourself and strategic enough to decide which ones to build. You're comfortable managing agencies and direct reports. You think in funnels, offers, and unit economics - not just traffic and impressions.</p>
+      <p>This role graduates into a CRO-level position as the business scales. If you want to own the revenue engine at a brand that's scaling fast with real products and real customers, this is it.</p>
     </div>
 
-    <!-- CORE ACCOUNTABILITIES -->
+    <!-- SCORECARD: OUTCOMES -->
     <div class="jd-section">
-      <div class="jd-section-label">Core Accountabilities</div>
+      <div class="jd-section-label">Scorecard - Outcomes</div>
+      <p>This is how we measure success. Not effort, not hours - outcomes with metrics and deadlines.</p>
 
-      <div class="jd-accountability">
-        <h4>1. Storefront and Landing Page Ownership</h4>
-        <p>Own the Shopify storefront: homepage, PDPs, landing pages, collection pages, cart experience, and checkout. You build and ship landing pages for every paid media offer — VSL pages, advertorial pages, quiz funnels, comparison pages, trial offers. You are the bridge between the ad and the conversion. Pixel-level attention to detail, fast turnaround, always optimized for mobile.</p>
+      <div class="milestone">
+        <div class="milestone-header">By Day 30</div>
+        <ul>
+          <li><strong>Full channel audit complete:</strong> Amazon health check (PPC performance, listing quality, account health), Shopify storefront audit (conversion rate, page speed, mobile experience, checkout flow), TikTok Shop assessment (what exists, what's needed to launch), and paid media audit (active accounts, spend, ROAS, creative performance).</li>
+          <li><strong>Klaviyo audit delivered:</strong> every existing flow and campaign reviewed. Gap analysis showing what's missing vs. what a best-in-class Klaviyo setup looks like. Priority build list with revenue projections.</li>
+          <li><strong>Agency and vendor assessment:</strong> reviewed all agency relationships (PPC, creative, media buying). Recommendation to CEO: keep, replace, expand, or bring in-house.</li>
+          <li><strong>Top 10 revenue opportunities identified:</strong> a prioritized list of the highest-ROI moves across all channels - quick wins and structural builds. Presented to CEO with estimated impact and timeline.</li>
+          <li><strong>Creative asset inventory:</strong> catalogued all existing ad creative, UGC, landing pages, and content assets. Identified gaps in the creative pipeline.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>2. Conversion Rate Optimization</h4>
-        <p>Own site-wide conversion rate as a primary KPI. Run A/B tests on headlines, layouts, CTAs, pricing presentation, trust elements, and page structure. You use data (GA4, heatmaps, session recordings) to identify drop-off points and fix them systematically. You don't guess — you test, measure, and iterate.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 60</div>
+        <ul>
+          <li><strong>Shopify CRO quick wins shipped:</strong> hero PDPs optimized, cart experience improved, mobile experience tightened, trust elements added. Measurable conversion rate improvement vs. baseline.</li>
+          <li><strong>Core Klaviyo flows live:</strong> welcome series, abandoned cart, browse abandonment, post-purchase education, and win-back flows are built, tested, and generating revenue. Not placeholders - real flows with segmentation and proper copy.</li>
+          <li><strong>Existing landing pages refined:</strong> current landing pages audited, optimized, and A/B tested. New landing pages built where gaps exist. Each paired to a specific offer and ad angle. Conversion tracked and reported.</li>
+          <li><strong>First bundle offers created:</strong> at least 2 bundle/offer structures tested on DTC (e.g., buy 2 get 1, starter kits, subscribe-and-save incentives). AOV impact measured.</li>
+          <li><strong>Weekly revenue dashboard live:</strong> all-channel dashboard covering Amazon revenue, DTC revenue, TikTok Shop, paid media spend, MER/ROAS, Klaviyo attributed revenue, conversion rate by funnel, and AOV. Updated weekly, reviewed in operating meeting.</li>
+          <li><strong>Paid media strategy defined:</strong> channel allocation (Meta, TikTok, Google), budget framework, creative testing methodology, and scaling criteria documented. Whether managed by agency or in-house, you own the strategy.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>3. Email and SMS (Klaviyo)</h4>
-        <p>Own the full lifecycle email and SMS program. Welcome flows, abandoned cart, browse abandonment, post-purchase education, win-back, subscription reminders, and campaign sends. You build flows that drive measurable revenue and treat Klaviyo as a profit center, not a notification system. Reporting weekly on flow revenue, campaign performance, and list growth.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 90</div>
+        <ul>
+          <li><strong>DTC revenue measurably up from baseline:</strong> combination of CRO improvements, Klaviyo revenue, new landing pages, and paid media optimization driving real revenue growth.</li>
+          <li><strong>TikTok Shop live:</strong> products listed, initial content published, affiliate/creator infrastructure in progress. GMV tracking from day one.</li>
+          <li><strong>Creative pipeline running:</strong> a repeatable system for producing ad creative - hooks, angles, formats documented. New ads shipping weekly, not monthly. Working with creative team and/or UGC creators.</li>
+          <li><strong>A/B testing rhythm established:</strong> at least 2-3 tests running at any time on Shopify (headlines, layouts, CTAs, pricing presentation, trust elements). Results logged and informing next tests.</li>
+          <li><strong>Subscription experience optimized:</strong> subscribe-and-save offer improved on PDPs, post-purchase subscription upsell in place, churn reduction tactics deployed. Tracking subscriber growth, churn rate, and LTV by cohort.</li>
+          <li><strong>Full funnel documented:</strong> every active offer mapped end-to-end: ad > landing page > purchase > post-purchase > retention. Playbook documented so anyone on the team can see how money flows.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>4. Subscription and LTV</h4>
-        <p>Own the subscription experience — onboarding, retention, churn reduction. Manage the subscription platform (Skio or equivalent), optimize the subscription offer on PDPs, and build post-purchase journeys that increase subscriber LTV. Track and report on subscriber growth, churn rate, and LTV by cohort.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 6</div>
+        <ul>
+          <li><strong>DTC is a real channel:</strong> DTC revenue is 15%+ of total (up from ~5% at hire) with profitable unit economics and MER within range of Amazon's contribution margin.</li>
+          <li><strong>TikTok Shop generating meaningful GMV:</strong> products selling, affiliate/creator program producing, and a clear optimization roadmap in place.</li>
+          <li><strong>3+ tested, ready-to-scale funnels per paid channel:</strong> offer + landing page + ad angles with playbooks documented. At any point the team can increase spend 2-3x without conversion rate dropping or ops breaking.</li>
+          <li><strong>Klaviyo driving 15-20%+ of DTC revenue:</strong> through flows and campaigns combined. List growing. Segmentation in place. Revenue per recipient improving.</li>
+          <li><strong>Amazon maintained or growing:</strong> under your strategic oversight, Amazon Brand Manager and PPC agency are performing. You're reviewing weekly, catching issues, and pushing improvements - not running it day-to-day.</li>
+          <li><strong>Creative is a machine:</strong> new ads, angles, and landing pages shipping weekly. Testing velocity is high. Winners are identified fast and scaled. Losers are killed fast.</li>
+          <li><strong>All-channel revenue growing 30%+ vs. prior period:</strong> with contribution margin maintained or improved. The revenue engine you've built can absorb more spend without breaking.</li>
+        </ul>
       </div>
-      <div class="jd-accountability">
-        <h4>5. Funnel Coordination with Paid Media</h4>
-        <p>Work hand-in-hand with the Head of Growth to ensure every paid media campaign has a matching, optimized landing experience. When a new creative angle wins, you build the corresponding LP within days, not weeks. You maintain ≥ 3 tested, ready-to-scale funnels (offer + LP + post-click experience) so the team can increase spend without conversion rate dropping.</p>
-      </div>
-      <div class="jd-accountability">
-        <h4>6. DTC Analytics and Reporting</h4>
-        <p>Own a weekly DTC performance report: revenue, MER, conversion rate by funnel, AOV, email/SMS revenue, subscription metrics, and LTV trends. You connect the numbers to decisions — what's working, what's not, and what to do about it.</p>
+    </div>
+
+    <!-- ONGOING KPIs -->
+    <div class="jd-section">
+      <div class="jd-section-label">Ongoing KPIs</div>
+      <p>Once the system is built, these are the numbers you own and review weekly. This is your scoreboard.</p>
+      <ul>
+        <li><strong>Total revenue (all channels):</strong> Amazon + DTC + TikTok Shop. Tracked weekly, reported in operating meeting.</li>
+        <li><strong>DTC revenue as % of total:</strong> target ≥ 15% by month 6, growing quarter over quarter.</li>
+        <li><strong>MER / blended ROAS:</strong> total revenue divided by total ad spend across all paid channels. Target improving or stable as spend scales.</li>
+        <li><strong>Shopify conversion rate:</strong> site-wide and by landing page/funnel. Target improving vs. baseline through ongoing CRO.</li>
+        <li><strong>Klaviyo attributed revenue:</strong> as % of DTC revenue. Target 15-20%+ through flows and campaigns combined.</li>
+        <li><strong>AOV:</strong> average order value on DTC. Tracked weekly, influenced through bundles, upsells, and subscription offers.</li>
+        <li><strong>Subscriber count + churn rate:</strong> net subscriber growth and monthly churn. LTV by cohort tracked quarterly.</li>
+        <li><strong>TikTok Shop GMV:</strong> monthly gross merchandise value. Tracked from launch with growth targets set after 90-day baseline.</li>
+        <li><strong>Creative velocity:</strong> number of new ad creatives shipped per week. Target consistent weekly output with clear test/kill/scale cadence.</li>
+        <li><strong>Ready-to-scale funnels:</strong> number of tested, profitable funnels per paid channel. Target ≥ 3 per channel at all times.</li>
+      </ul>
+    </div>
+
+    <!-- SCORECARD: COMPETENCIES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Competencies</div>
+      <p>Behavioral traits we interview against directly.</p>
+      <div class="competency-grid">
+        <div class="competency-item">
+          <strong>Full-funnel thinker</strong>
+          Thinks from ad to repeat purchase. Connects creative, landing page, checkout, email, and retention into a single revenue system.
+        </div>
+        <div class="competency-item">
+          <strong>Builder and strategist</strong>
+          Can build a landing page in Shopify Liquid themselves AND decide which landing page to build. Technical enough to execute, strategic enough to prioritize.
+        </div>
+        <div class="competency-item">
+          <strong>Data-obsessed</strong>
+          Lives in GA4, Shopify analytics, Klaviyo dashboards, and ad platform reporting. Makes decisions from data, not gut. Tests, measures, iterates.
+        </div>
+        <div class="competency-item">
+          <strong>Creative thinker</strong>
+          Understands what makes an ad stop the scroll, what makes a landing page convert, and what makes an email get clicked. Briefs creative with clarity and taste.
+        </div>
+        <div class="competency-item">
+          <strong>Multi-channel operator</strong>
+          Comfortable managing Amazon, Shopify, TikTok Shop, and paid media simultaneously. Doesn't get tunnel vision on one channel.
+        </div>
+        <div class="competency-item">
+          <strong>Agency manager</strong>
+          Has managed external agencies (PPC, creative, media buying) and knows how to hold them accountable to performance, not activity.
+        </div>
+        <div class="competency-item">
+          <strong>Speed with quality</strong>
+          Ships fast. Doesn't let perfect be the enemy of live. But also doesn't ship garbage - high bar for what goes in front of customers.
+        </div>
+        <div class="competency-item">
+          <strong>Radical honesty</strong>
+          Pushes back with data. Flags what's not working. Doesn't sugarcoat performance. Says what needs to be said.
+        </div>
       </div>
     </div>
 
@@ -157,30 +253,30 @@
       <div class="jd-section-label">Explicit Boundaries</div>
       <p>This role does not own:</p>
       <ul>
-        <li>Paid media buying or campaign management — that sits with the Head of Growth</li>
-        <li>Amazon marketplace — that's the Head of Amazon</li>
-        <li>Brand positioning or product philosophy — those belong to the Founder</li>
-        <li>UGC or ad creative production — you brief what you need, the creative team builds it</li>
+        <li>Product vision, formulation philosophy, or brand worldview - those belong to the Founder</li>
+        <li>Operations, supply chain, HR, or finance ops - that belongs to the operations function</li>
+        <li>Brand voice and positioning - you execute within brand guidelines set by the Founder</li>
       </ul>
-      <p>You own everything between the ad click and the repeat purchase. The storefront, the conversion, the retention.</p>
+      <p><strong>You own everything that generates revenue.</strong> From the ad to the landing page to the checkout to the repeat purchase across every channel. Operations makes sure it ships. You make sure it sells.</p>
     </div>
 
     <!-- DECISION RIGHTS -->
     <div class="jd-section">
       <div class="jd-section-label">Decision Rights</div>
-      <p><strong>Owns:</strong> Shopify storefront, all landing pages, email/SMS strategy and execution, subscription experience, CRO testing, and DTC performance reporting.</p>
+      <p><strong>Owns:</strong> All revenue channel strategy and execution (Amazon oversight, Shopify DTC, TikTok Shop), paid media strategy, creative strategy, Klaviyo email/SMS, CRO, landing pages, subscription experience, bundle/offer strategy, agency management, and all-channel revenue reporting.</p>
       <p><strong>Reports to:</strong> Founder &amp; CEO.</p>
-      <p><strong>Collaborates with:</strong> Head of Growth on paid media ↔ landing page alignment, Creative team on assets and UGC, Head of Operations on fulfillment and subscription logistics, and CX Lead on post-purchase experience.</p>
+      <p><strong>Collaborates with:</strong> Operations on fulfillment and inventory, creative team on ad and content production, CX on post-purchase experience, and all agency partners.</p>
     </div>
 
     <!-- THIS ROLE IS NOT -->
     <div class="jd-section">
       <div class="jd-section-label">This Role Is Not</div>
       <ul>
-        <li>A Shopify developer who waits for tickets — you own the strategy and the execution</li>
+        <li>A Shopify developer who waits for tickets - you own the strategy and the execution</li>
+        <li>A media buyer who only knows how to run ads but can't build what happens after the click</li>
         <li>A generalist marketer with ecommerce as one of five responsibilities</li>
-        <li>An email manager who sends newsletters — you build a revenue engine</li>
-        <li>A designer who makes things look nice but doesn't track conversion rate</li>
+        <li>An email manager who sends newsletters - you build a revenue engine</li>
+        <li>Someone who manages Amazon and ignores DTC, or vice versa - you own the full picture</li>
       </ul>
     </div>
 
@@ -188,14 +284,19 @@
     <div class="jd-section">
       <div class="jd-section-label">Ideal Candidate</div>
       <ul>
-        <li>3–6 years owning a Shopify DTC storefront at a brand doing $2M–$20M+ in DTC revenue</li>
-        <li>Deep Shopify expertise — Liquid, theme customization, app ecosystem (Klaviyo, Skio/ReCharge, Rebuy, Okendo, Shogun or equivalent)</li>
-        <li>Proven CRO chops — you've run tests, improved conversion rates, and can talk through your methodology</li>
+        <li>4-7 years owning revenue at a DTC brand doing $5M-$30M+ - you've scaled channels, not just managed them</li>
+        <li>Deep Shopify expertise - Liquid, theme customization, app ecosystem (Klaviyo, Skio/ReCharge, Rebuy, Okendo, or equivalents)</li>
         <li>Built and managed Klaviyo flows that drove measurable revenue, not just opens and clicks</li>
+        <li>Proven CRO chops - you've run tests, improved conversion rates, and can talk through your methodology</li>
+        <li>Paid media strategy experience - you've owned or closely managed Meta, TikTok, and/or Google campaigns with real budget</li>
+        <li>Amazon fluency - you understand the platform well enough to oversee a Brand Manager and PPC agency and catch when things are off</li>
+        <li>TikTok Shop experience preferred - you've launched or scaled a TikTok Shop, or have deep platform knowledge</li>
         <li>Supplement, health, wellness, or fitness brand experience strongly preferred</li>
-        <li>Can build and ship landing pages fast — you don't need a developer for every change</li>
-        <li>Data-driven — you live in GA4, Shopify analytics, and Klaviyo dashboards and make decisions from them</li>
+        <li>Can build and ship landing pages fast - you don't need a developer for every change</li>
+        <li>Proficient with AI tools (ChatGPT, Claude, etc.) as daily workflow tools</li>
+        <li>U.S.-based - this is a U.S.-only hire</li>
       </ul>
+      <p><strong>Bonus:</strong> You've built a brand's DTC channel from near-zero to a meaningful revenue contributor. You've been the person who turned "we're mostly Amazon" into "we're a real multi-channel brand."</p>
     </div>
 
     <!-- APPLY -->
