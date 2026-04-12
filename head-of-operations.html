@@ -65,6 +65,22 @@
     .jd-apply-btn { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 18px 48px; text-decoration: none; transition: all 0.3s ease; }
     .jd-apply-btn:hover { background: #2a2a2a; }
 
+    /* ── APPLICATION FORM ── */
+    .apply-form { max-width: 100%; }
+    .apply-form .form-note { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 32px; padding: 20px 24px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--gold); text-align: left; }
+    .apply-form .form-note strong { color: var(--text-primary); }
+    .form-group { margin-bottom: 24px; text-align: left; }
+    .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+    .form-group .form-hint { display: block; font-size: 13px; color: var(--text-tertiary); margin-bottom: 8px; line-height: 1.5; font-weight: 400; }
+    .form-group input, .form-group textarea { width: 100%; padding: 14px 16px; font-family: "DM Sans", sans-serif; font-size: 15px; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 0; transition: border-color 0.3s ease; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.1); }
+    .form-group input::placeholder { color: var(--text-tertiary); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-submit { display: inline-flex; font-family: "DM Sans", sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 18px 48px; border: none; cursor: pointer; transition: all 0.3s ease; margin-top: 8px; }
+    .form-submit:hover { background: #2a2a2a; }
+    @media (max-width: 700px) { .form-row { grid-template-columns: 1fr; } }
+
     .footer { padding: 48px 40px; max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
     .footer p { font-size: 13px; color: var(--text-tertiary); }
     .footer-links { display: flex; gap: 24px; }
@@ -75,7 +91,8 @@
       .nav { padding: 16px 24px; } .nav-links a:not(.nav-cta) { display: none; }
       .jd-container { padding: 120px 24px 60px; } .jd-detail-row { grid-template-columns: 1fr; gap: 20px; }
       .competency-grid { grid-template-columns: 1fr; }
-      .footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
+
+    .footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
     }
   </style>
 </head>
@@ -86,7 +103,7 @@
     <div class="nav-links">
       <a href="./">All Roles</a>
       <a href="https://formulationfactory.com/pages/about">Our Story</a>
-      <a href="mailto:careers@formulationfactory.com?subject=Application: Head of Operations" class="nav-cta">Apply Now</a>
+      <a href="/cdn-cgi/l/email-protection#94f7f5e6f1f1e6e7d4f2fbe6f9e1f8f5e0fdfbfaf2f5f7e0fbe6edbaf7fbf9abe7e1f6fef1f7e0a9d5e4e4f8fdf7f5e0fdfbfaaeb4dcf1f5f0b4fbf2b4dbe4f1e6f5e0fdfbfae7" class="nav-cta">Apply Now</a>
     </div>
   </nav>
 
@@ -294,10 +311,36 @@
       <p><strong>Bonus:</strong> You've built custom GPTs, automation workflows, or internal AI tools that your team actually uses daily.</p>
     </div>
 
-    <!-- APPLY -->
-    <div class="jd-apply-section">
-      <p>If this sounds like you, we want to hear from you.</p>
-      <a href="mailto:careers@formulationfactory.com?subject=Application: Head of Operations" class="jd-apply-btn">Apply for This Role</a>
+    <!-- APPLICATION FORM -->
+    <div class="jd-apply-section" style="text-align: left;">
+      <div class="jd-section-label">Apply</div>
+      <h3 style="font-weight: 700; font-size: 24px; color: var(--text-primary); margin-bottom: 12px; letter-spacing: -0.3px;">Interested? Let's hear from you.</h3>
+      <form class="apply-form" action="https://formsubmit.co/careers@formulationfactory.com" method="POST">
+        <input type="hidden" name="_subject" value="New Application: Head of Operations">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-note">
+          <strong>Please answer the questions below in your own words.</strong> We want to hear how you think and communicate - not how well you prompt ChatGPT. AI-generated responses will be filtered out. We love AI as a tool (and use it daily) but this application is about you.
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="Full Name" required></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" name="Phone"></div>
+          <div class="form-group"><label>Location *</label><span class="form-hint">City, State</span><input type="text" name="Location" required></div>
+        </div>
+        <div class="form-group"><label>LinkedIn URL *</label><input type="url" name="LinkedIn" required placeholder="https://linkedin.com/in/..."></div>
+        <div class="form-group"><label>Which role are you applying for? *</label><input type="text" name="Role" required value="Head of Operations"></div>
+        <div class="form-group"><label>Why this company? *</label><span class="form-hint">What about Formulation Factory specifically made you want to apply? Be specific - generic answers get filtered out.</span><textarea name="Why This Company" required rows="4"></textarea></div>
+        <div class="form-group"><label>What have you built? *</label><span class="form-hint">Describe one thing you built, scaled, or fixed at a previous company that you're most proud of. Include the numbers.</span><textarea name="What Have You Built" required rows="4"></textarea></div>
+        <div class="form-group"><label>What's your AI stack? *</label><span class="form-hint">What AI tools do you use daily and how do you use them? If you don't use AI regularly, say so.</span><textarea name="AI Stack" required rows="3"></textarea></div>
+        <div class="form-group"><label>Boss rating *</label><span class="form-hint">Who was your most recent manager? What would they rate your performance 1-10, and why?</span><textarea name="Boss Rating" required rows="3"></textarea></div>
+        <div class="form-group"><label>Salary expectations *</label><span class="form-hint">What is your expected base compensation?</span><input type="text" name="Salary Expectations" required></div>
+        <div class="form-group"><label>Anything else?</label><span class="form-hint">Portfolio links, case studies, work samples, or anything else you want us to know.</span><textarea name="Anything Else" rows="3"></textarea></div>
+        <button type="submit" class="form-submit">Submit Application</button>
+      </form>
     </div>
 
   </div>
