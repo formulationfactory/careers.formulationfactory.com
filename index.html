@@ -125,6 +125,81 @@
       .role-tags { flex-wrap: wrap; } .role-arrow { display: none; }
       .footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 20px; }
     }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); z-index: 1000;
+      overflow-y: auto; -webkit-overflow-scrolling: touch;
+      padding: 40px 20px;
+    }
+    .modal-overlay.active { display: flex; justify-content: center; align-items: flex-start; }
+    .modal-content {
+      background: var(--bg); max-width: 840px; width: 100%;
+      padding: 48px 48px 32px; position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      margin: 0 auto;
+    }
+    .modal-close {
+      position: sticky; top: 0; float: right;
+      width: 40px; height: 40px; background: var(--bg-card);
+      border: 1px solid var(--border); display: flex;
+      align-items: center; justify-content: center;
+      cursor: pointer; z-index: 10; transition: all 0.2s ease;
+      font-size: 20px; color: var(--text-secondary); line-height: 1;
+    }
+    .modal-close:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+    /* JD styles inside modal */
+    .modal-content .jd-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+    .modal-content .jd-meta-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.5px; padding: 6px 16px; border: 1px solid rgba(201,168,76,0.35); color: #a8893c; }
+    .modal-content .jd-title { font-weight: 700; font-size: clamp(28px,4vw,42px); line-height: 1.1; letter-spacing: -1.5px; color: var(--text-primary); margin-bottom: 8px; }
+    .modal-content .jd-updated { font-size: 13px; color: var(--text-tertiary); font-style: italic; margin-bottom: 16px; }
+    .modal-content .jd-detail-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    .modal-content .jd-detail-item label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .modal-content .jd-detail-item p { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+    .modal-content .jd-section { margin-bottom: 48px; }
+    .modal-content .jd-section-label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .modal-content .jd-section p { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 14px; }
+    .modal-content .jd-section p strong { color: var(--text-primary); }
+    .modal-content .jd-section ul { list-style: none; padding: 0; }
+    .modal-content .jd-section ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .modal-content .jd-section ul li::before { content: '-'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .modal-content .jd-mission { font-size: 17px; line-height: 1.7; color: var(--text-primary); font-weight: 500; margin-bottom: 14px; }
+    .modal-content .milestone { margin-bottom: 28px; }
+    .modal-content .milestone-header { font-weight: 700; font-size: 16px; color: var(--text-primary); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .modal-content .milestone ul { list-style: none; padding: 0; }
+    .modal-content .milestone ul li { font-size: 15px; line-height: 1.8; color: var(--text-secondary); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .modal-content .milestone ul li::before { content: '-'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+    .modal-content .milestone ul li strong { color: var(--text-primary); }
+    .modal-content .competency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .modal-content .competency-item { font-size: 14px; line-height: 1.7; color: var(--text-secondary); padding: 14px 18px; background: var(--bg-card); border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .modal-content .competency-item strong { color: var(--text-primary); display: block; margin-bottom: 2px; font-size: 14px; }
+
+    /* Form in modal */
+    .modal-content .jd-apply-section { margin-top: 48px; padding-top: 48px; border-top: 1px solid var(--border); text-align: left; }
+    .modal-content .apply-form { max-width: 100%; }
+    .modal-content .form-note { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 32px; padding: 20px 24px; background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--gold); text-align: left; }
+    .modal-content .form-note strong { color: var(--text-primary); }
+    .modal-content .form-group { margin-bottom: 24px; text-align: left; }
+    .modal-content .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+    .modal-content .form-group .form-hint { display: block; font-size: 13px; color: var(--text-tertiary); margin-bottom: 8px; line-height: 1.5; font-weight: 400; }
+    .modal-content .form-group input, .modal-content .form-group textarea { width: 100%; padding: 14px 16px; font-family: "DM Sans", sans-serif; font-size: 15px; color: var(--text-primary); background: var(--bg-card); border: 1px solid var(--border); border-radius: 0; transition: border-color 0.3s ease; outline: none; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    .modal-content .form-group input:focus, .modal-content .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.1); }
+    .modal-content .form-group input::placeholder { color: var(--text-tertiary); }
+    .modal-content .form-group textarea { resize: vertical; min-height: 120px; }
+    .modal-content .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .modal-content .form-submit { display: inline-flex; font-family: "DM Sans", sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--dark); padding: 18px 48px; border: none; cursor: pointer; transition: all 0.3s ease; margin-top: 8px; }
+    .modal-content .form-submit:hover { background: #2a2a2a; }
+
+    @media (max-width: 700px) {
+      .modal-overlay { padding: 20px 10px; }
+      .modal-content { padding: 32px 20px 24px; }
+      .modal-content .jd-detail-row { grid-template-columns: 1fr; gap: 16px; }
+      .modal-content .competency-grid { grid-template-columns: 1fr; }
+      .modal-content .form-row { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -133,7 +208,7 @@
     <a href="https://formulationfactory.com" class="nav-logo"><img src="https://formulationfactory.com/cdn/shop/files/FORMULATION-FACTORY-LOGO-Text-w-SubMark-Separator-BLACK.webp?v=1770917735&width=520" alt="Formulation Factory"></a>
     <div class="nav-links">
       <a href="https://formulationfactory.com/pages/about">Our Story</a>
-      <a href="https://formulationfactory.com/collections/all-1">Shop</a>
+      <a href="https://formulationfactory.com/collections/all">Shop</a>
       <a href="#open-roles" class="nav-cta">Open Roles</a>
     </div>
   </nav>
@@ -333,7 +408,7 @@
       <p class="section-desc">We're growing deliberately. Every hire is high-leverage. If you see yourself here, don't wait.</p>
 
       <div class="roles-list">
-        <a class="role-card" href="./head-of-operations.html">
+        <a class="role-card" href="#" onclick="openModal('modal-ops'); return false;">
           <div class="role-info">
             <h3>Head of Operations <span class="badge-contract">In Progress</span></h3>
             <p>Own the operating rhythm, supply chain, process infrastructure, and team accountability. The system that holds everything together.</p>
@@ -344,7 +419,7 @@
           </div>
           <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
         </a>
-        <a class="role-card" href="./director-of-performance-marketing.html">
+        <a class="role-card" href="#" onclick="openModal('modal-perf'); return false;">
           <div class="role-info">
             <h3>Director of Performance Marketing</h3>
             <p>Own the full performance funnel - paid media across Meta, TikTok, and Google plus CRO strategy. Every ad dollar matched with an optimized conversion experience.</p>
@@ -355,7 +430,7 @@
           </div>
           <svg class="role-arrow" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
         </a>
-        <a class="role-card" href="./director-of-distribution.html">
+        <a class="role-card" href="#" onclick="openModal('modal-dist'); return false;">
           <div class="role-info">
             <h3>Director of Distribution & Social Media</h3>
             <p>Build the content distribution network - clip channels, repost accounts, syndication systems - that multiplies every piece of content into 10x the impressions.</p>
@@ -384,7 +459,654 @@
   <footer class="footer">
     <p>&copy; 2026 Formulation Factory LLC. All rights reserved.</p>
     <div class="footer-links">
-      <a href="https://formulationfactory.com">Shop</a>
+      <a href="https://formulationfactory.com/collections/all">Shop</a>
       <a href="https://formulationfactory.com/pages/about">Our Story</a>
       <a href="https://www.instagram.com/formulationfactory" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@formulatio
+      <a href="https://www.tiktok.com/@formulationfactoryfans" target="_blank">TikTok</a>
+    </div>
+  </footer>
+
+  <!-- ══════ MODALS ══════ -->
+
+  <div class="modal-overlay" id="modal-ops">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeModal('modal-ops')">&times;</div>
+      <div class="jd-meta">
+      <span class="jd-meta-tag">Operations</span>
+      <span class="jd-meta-tag">Remote (U.S. Only)</span>
+      <span class="jd-meta-tag">Full-Time</span>
+    </div>
+
+    <h1 class="jd-title">Head of Operations</h1>
+    <p class="jd-updated">Last updated: April 2026</p>
+
+    <div class="jd-detail-row">
+      <div class="jd-detail-item">
+        <label>Reports To</label>
+        <p>Founder &amp; CEO</p>
+      </div>
+      <div class="jd-detail-item">
+        <label>Location</label>
+        <p>Remote (U.S. only)</p>
+      </div>
+      <div class="jd-detail-item">
+        <label>Compensation</label>
+        <p>$180K base + performance bonus</p>
+      </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="jd-section">
+      <div class="jd-section-label">Mission</div>
+      <p class="jd-mission">Own the operating system at Formulation Factory - <strong>weekly cadence, team accountability, supply chain, HR, finance ops, and process infrastructure</strong> - so the business scales from $13M to $20M+ without the Founder being the bottleneck on day-to-day execution.</p>
+    </div>
+
+    <!-- ROLE CONTEXT -->
+    <div class="jd-section">
+      <div class="jd-section-label">Role Context</div>
+      <p>The company has functional leads across growth and marketing, CX, and creative. What's missing is someone who owns the operating system that ties all of it together - the weekly cadence, KPI accountability, HR, supply chain, finance ops, process documentation, technology stack, and cross-functional coordination that keeps a fast-growing brand from breaking.</p>
+      <p>This is a senior leadership position for someone who has been the operational backbone of a DTC brand that scaled from $10M to $30M+. You've implemented EOS or a similar operating system, you live in Notion, and you use AI as a daily tool - not a novelty. You build the machine that makes everyone else faster.</p>
+      <p>You are biased toward speed and decisive action, but you protect the team from chaos with clear priorities and simple systems.</p>
+      <p>You're a 3+ monitor person. You have Notion, Slack, your P&L, and a supply chain dashboard open simultaneously - not because someone told you to, but because that's how your brain works. You're wired to monitor, catch, and fix before anyone else notices.</p>
+    </div>
+
+    <!-- SCORECARD: OUTCOMES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Outcomes</div>
+      <p>This is how we measure success. Not effort, not hours - outcomes with metrics and deadlines.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 30</div>
+        <ul>
+          <li><strong>Fully embedded in Notion:</strong> reviewed entire workspace, understands current structure, and has begun organizing and consolidating. Has access to all critical dashboards, docs, and databases.</li>
+          <li><strong>Team audit complete:</strong> reviewed every seat on the team, had 1:1s with all direct reports and key contributors, and has a written assessment of who is in the right seat vs who is not.</li>
+          <li><strong>1:1 structure established:</strong> a proper weekly 1:1 cadence is installed with every manager. Each manager understands the format, expectations, and documentation standard. You are reviewing 1:1 notes weekly.</li>
+          <li><strong>Weekly operating cadence launched:</strong> a single weekly leadership meeting (L10-style or equivalent) is in place - scorecard, issues list, clear owner per metric - and is followed by all functional leads.</li>
+          <li><strong>Risk map delivered:</strong> top 5 operational risks to the business identified (supply chain concentration, compliance exposure, key-person dependencies, etc.) with a mitigation plan for each. Presented to CEO.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 60</div>
+        <ul>
+          <li><strong>Finance ops transferred:</strong> all bills, subscriptions, and vendor payments are routed to a centralized finance@ workflow and managed by you or your designee. No bills floating in the CEO's inbox.</li>
+          <li><strong>Daily P&L review:</strong> you are reviewing P&L performance across SKUs and channels daily, flagging anomalies, and bringing a weekly finance summary to the operating meeting. Working with the bookkeeper, not replacing them.</li>
+          <li><strong>Vendor and contract audit complete:</strong> every vendor contract, 3PL agreement, and CM relationship reviewed. Where are terms bad? Where are we overpaying? Where is a vendor a single point of failure? Written report with renegotiation or replacement recommendations delivered to CEO.</li>
+          <li><strong>Google Drive + Notion audit complete:</strong> file structure is rationalized, permissions are cleaned up, and the team has a single source of truth for every function.</li>
+          <li><strong>HR processes live:</strong> internal hiring funnel, onboarding checklist, and offboarding process are documented and running. Payroll is being overseen (provider-managed) without CEO involvement.</li>
+          <li><strong>Technology stack audit delivered:</strong> every SaaS tool across every department is catalogued with cost, owner, and recommendation (keep, replace, consolidate). Presented to CEO for approval.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 90</div>
+        <ul>
+          <li><strong>Hiring underway:</strong> open seats identified based on growth forecasting and team gaps. Every hire uses the scorecard methodology (mission, outcomes, competencies) with structured interviews. All new hires are on-track against their 30-day milestones within 45 days of start.</li>
+          <li><strong>Fully running the organization day-to-day:</strong> the Founder spends &lt;5 hrs/week on recurring ops. You own the operating rhythm, the team cadence, and the cross-functional coordination.</li>
+          <li><strong>Business forecasting:</strong> a rolling 13-week cash forecast is live and updated weekly. You are forecasting business growth and directional planning alongside the CEO - revenue targets, headcount plan, capacity planning.</li>
+          <li><strong>Team performance managed:</strong> every team member has a written scorecard (3-5 KPIs). B- and C-players are identified with clear improvement plans or exit timelines.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 6</div>
+        <ul>
+          <li><strong>Supply chain dialed:</strong> hero SKU in-stock rate ≥ 98% across Amazon and DTC. Every SKU has a documented reorder point, lead time, and safety stock level. No stockouts on top 5 SKUs for 3+ consecutive months.</li>
+          <li><strong>3+ workflows automated:</strong> reporting, CX macros, purchase orders, content briefs, or similar - automated or AI-assisted, reducing manual hours by ≥30% without adding headcount.</li>
+          <li><strong>Internal AI solutions deployed:</strong> at least 2 internal AI tools or workflows (custom GPTs, automation, reporting bots) that the team uses daily.</li>
+          <li><strong>No single point of failure:</strong> each core function (growth and marketing, DTC, CX, supply chain) has a clear owner, documented SOPs, and at least 1 trained backup.</li>
+          <li><strong>New hires producing:</strong> all new hires are onboarded, have scorecards, and are hitting their milestones in the weekly rhythm.</li>
+          <li><strong>Operating system is self-sustaining:</strong> weekly cadence, scorecards, 1:1s, hiring processes, and reporting run without you having to enforce them manually every week. The system scales to $20M+ without adding layers of management.</li>
+          <li><strong>Founder spends &lt;2 hrs/week on ops.</strong> Their calendar is majority acquisitions, partnerships, content, and long-term brand strategy.</li>
+          <li><strong>Cash forecast tracking within ±10% variance</strong> for 3+ consecutive months. DTC SaaS stack rationalized. The team is measurably stronger than when you arrived.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ONGOING KPIs -->
+    <div class="jd-section">
+      <div class="jd-section-label">Ongoing KPIs</div>
+      <p>Once the system is built, these are the numbers you own and review weekly. This is your scoreboard.</p>
+      <ul>
+        <li><strong>Hero SKU in-stock rate:</strong> target ≥ 98% across Amazon and DTC.</li>
+        <li><strong>Cash forecast variance:</strong> rolling 13-week forecast within ±10% of actuals.</li>
+        <li><strong>Team scorecard completion:</strong> 100% of team members have active scorecards with 3-5 KPIs, reviewed weekly in 1:1s.</li>
+        <li><strong>SOP coverage:</strong> % of core workflows with documented, current SOPs. Target 100% of critical processes.</li>
+        <li><strong>Vendor cost savings:</strong> tracked quarterly vs. baseline at hire. Target measurable savings through renegotiation and consolidation.</li>
+        <li><strong>Founder ops hours:</strong> weekly hours CEO spends on recurring ops. Target &lt;2 hrs/week by month 6.</li>
+        <li><strong>Hiring pipeline velocity:</strong> time from open seat to offer accepted. Target &lt;30 days for non-executive roles.</li>
+        <li><strong>Workflow automation savings:</strong> manual hours reduced through AI/automation across automated workflows. Target ≥ 30% reduction.</li>
+      </ul>
+    </div>
+
+    <!-- SCORECARD: COMPETENCIES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Competencies</div>
+      <p>Behavioral traits we interview against directly.</p>
+      <div class="competency-grid">
+        <div class="competency-item">
+          <strong>Systems builder</strong>
+          Designs processes, cadences, and accountability structures that run without manual enforcement. Notion power user.
+        </div>
+        <div class="competency-item">
+          <strong>Speed with structure</strong>
+          Biased toward action but builds guardrails that let the team move fast without chaos.
+        </div>
+        <div class="competency-item">
+          <strong>Supply chain operator</strong>
+          Knows inventory math cold - reorder points, lead times, safety stock, landed costs. Has managed CMs and 3PLs directly.
+        </div>
+        <div class="competency-item">
+          <strong>Financial rigor</strong>
+          Builds cash forecasts, reads a P&L daily, connects operational decisions to margin impact.
+        </div>
+        <div class="competency-item">
+          <strong>AI power user</strong>
+          Uses AI daily. Builds internal tools and workflows. Expects the team to do the same. Not a novelty user - a systems user.
+        </div>
+        <div class="competency-item">
+          <strong>Talent standard-setter</strong>
+          Installs scorecards, runs structured interviews, gives direct feedback, exits underperformers. Hires A-players.
+        </div>
+        <div class="competency-item">
+          <strong>Cross-functional integrator</strong>
+          Resolves trade-offs between growth and marketing, ops, and CX without escalating to the Founder. Keeps functions aligned.
+        </div>
+        <div class="competency-item">
+          <strong>Radical honesty</strong>
+          Pushes back with data. Says what needs to be said. Never complies when they see a better path.
+        </div>
+      </div>
+    </div>
+
+    <!-- BOUNDARIES -->
+    <div class="jd-section">
+      <div class="jd-section-label">Explicit Boundaries</div>
+      <p>This role does not own:</p>
+      <ul>
+        <li>Growth and marketing strategy, paid media, and channel strategy - that belongs to the growth and marketing function</li>
+        <li>Product vision, formulation philosophy, or brand worldview - those belong to the Founder</li>
+        <li>Creative direction - you ensure creative output is resourced and on schedule</li>
+      </ul>
+      <p><strong>You own the operating infrastructure that all of those functions run on.</strong> When Growth wants to scale spend 3x, you're the one who ensures fulfillment, CX, and inventory can handle it without breaking.</p>
+    </div>
+
+    <!-- DECISION RIGHTS -->
+    <div class="jd-section">
+      <div class="jd-section-label">Decision Rights</div>
+      <p><strong>Owns:</strong> Operating cadence, supply chain, inventory, vendor/3PL relationships, HR (hiring, onboarding, offboarding, payroll oversight), process/SOP documentation, technology stack, team scorecards, financial reporting/forecasting, Notion and Google Drive organization, and cross-functional coordination.</p>
+      <p><strong>Reports to:</strong> Founder &amp; CEO.</p>
+      <p><strong>Collaborates with:</strong> Growth and marketing team on DTC, Amazon, and paid media, eCommerce on storefront and subscription ops, CX on support workflows, and all agency partners.</p>
+    </div>
+
+    <!-- THIS ROLE IS NOT -->
+    <div class="jd-section">
+      <div class="jd-section-label">This Role Is Not</div>
+      <ul>
+        <li>A COO title for someone who wants to be chief of everything - this is ops, not the whole company</li>
+        <li>A generalist who needs to be educated on supplement supply chains or DTC fulfillment</li>
+        <li>A project manager who tracks tasks but doesn't own outcomes</li>
+        <li>A cautious executive who slows things down to build consensus</li>
+        <li>A reactive tornado - all gas, no steering wheel</li>
+      </ul>
+    </div>
+
+    <!-- IDEAL CANDIDATE -->
+    <div class="jd-section">
+      <div class="jd-section-label">Ideal Candidate</div>
+      <ul>
+        <li>3-7 years in operations at a DTC brand that scaled from $10M to $30M+ - you've lived through the scaling pain and know what breaks</li>
+        <li>Supplement, health, wellness, or fitness industry experience strongly preferred</li>
+        <li>Expert in EOS or a similar operating system - you've implemented it, not just read the book</li>
+        <li>Notion power user - you've built and managed an entire company workspace, not just a few pages</li>
+        <li>Direct experience managing supply chain, contract manufacturers, and 3PLs</li>
+        <li>Managed all HR functions at a small company: hiring pipelines, onboarding, offboarding, payroll oversight</li>
+        <li>Strong financial literacy - daily P&L review, cash forecasting, vendor management, and bill pay oversight</li>
+        <li>Proficient with AI tools (ChatGPT, Claude, etc.) as daily operational tools, not experiments</li>
+        <li>U.S.-based - this is a U.S.-only hire</li>
+      </ul>
+      <p><strong>Bonus:</strong> You've built custom GPTs, automation workflows, or internal AI tools that your team actually uses daily.</p>
+    </div>
+
+    <!-- APPLICATION FORM -->
+    <div class="jd-apply-section" style="text-align: left;">
+      <div class="jd-section-label">Apply</div>
+      <h3 style="font-weight: 700; font-size: 24px; color: var(--text-primary); margin-bottom: 12px; letter-spacing: -0.3px;">Interested? Let's hear from you.</h3>
+      <form class="apply-form" action="https://formsubmit.co/829bf7eb8844ba03a0685772182524d0" method="POST">
+        <input type="hidden" name="_subject" value="New Application: Head of Operations">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://careers.formulationfactory.com">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-note">
+          <strong>Please answer the questions below in your own words.</strong> We want to hear how you think and communicate - not how well you prompt ChatGPT. AI-generated responses will be filtered out. We love AI as a tool (and use it daily) but this application is about you.
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="Full Name" required></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" name="Phone"></div>
+          <div class="form-group"><label>Location *</label><input type="text" name="Location" required placeholder="City, State"></div>
+        </div>
+        <div class="form-group"><label>LinkedIn URL *</label><input type="url" name="LinkedIn" required placeholder="https://linkedin.com/in/..."></div>
+        <div class="form-group"><label>Which role are you applying for? *</label><input type="text" name="Role" required value="Head of Operations"></div>
+        <div class="form-group"><label>Why this company? *</label><span class="form-hint">What about Formulation Factory specifically made you want to apply? Be specific - generic answers get filtered out.</span><textarea name="Why This Company" required rows="4"></textarea></div>
+        <div class="form-group"><label>What have you built? *</label><span class="form-hint">Describe one thing you built, scaled, or fixed at a previous company that you're most proud of. Include the numbers.</span><textarea name="What Have You Built" required rows="4"></textarea></div>
+        <div class="form-group"><label>What's your AI stack? *</label><span class="form-hint">What AI tools do you use daily and how do you use them? If you don't use AI regularly, say so.</span><textarea name="AI Stack" required rows="3"></textarea></div>
+        <div class="form-group"><label>Boss rating *</label><span class="form-hint">Who was your most recent manager? What would they rate your performance 1-10, and why?</span><textarea name="Boss Rating" required rows="3"></textarea></div>
+        <div class="form-group"><label>Salary expectations *</label><span class="form-hint">What is your expected base compensation?</span><input type="text" name="Salary Expectations" required></div>
+        <div class="form-group"><label>Anything else?</label><span class="form-hint">Portfolio links, case studies, work samples, or anything else you want us to know.</span><textarea name="Anything Else" rows="3"></textarea></div>
+        <button type="submit" class="form-submit">Submit Application</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-perf">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeModal('modal-perf')">&times;</div>
+      <div class="jd-meta">
+      <span class="jd-meta-tag">Performance Marketing</span>
+      <span class="jd-meta-tag">Remote (U.S. Only)</span>
+      <span class="jd-meta-tag">Full-Time</span>
+    </div>
+
+    <h1 class="jd-title">Director of Performance Marketing</h1>
+    <p class="jd-updated">Last updated: May 2026</p>
+
+    <div class="jd-detail-row">
+      <div class="jd-detail-item"><label>Reports To</label><p>VP of eCommerce</p></div>
+      <div class="jd-detail-item"><label>Location</label><p>Remote (U.S. only)</p></div>
+      <div class="jd-detail-item"><label>Compensation</label><p>$130K-$160K base + performance bonus</p></div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Mission</div>
+      <p class="jd-mission">Own the full performance funnel at Formulation Factory - <strong>paid media strategy and execution across Meta, TikTok, and Google, plus CRO strategy for the Shopify storefront</strong> - so every ad dollar has a matching, optimized conversion experience on the other end, and DTC scales profitably.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Role Context</div>
+      <p>The platforms have automated most of the tactical media buying work. Advantage+, PMax, and Smart+ campaigns handle the bid optimization that used to take 30 hours a week. What hasn't been automated is the thinking - which creative angles to test, which offers to scale, how to match ad messaging to landing page experience, and when to shift budget between channels.</p>
+      <p>That's why this role exists as a hybrid. You own paid media strategy and execution across all three channels. You also own CRO strategy for the Shopify storefront - deciding which landing pages to build, which A/B tests to run, and how offer architecture impacts conversion. The actual Shopify build work gets executed by an offshore CRO firm that you manage and hold accountable.</p>
+      <p>The feedback loop between "what ad is winning" and "what landing page should match it" lives in one brain - yours. When a creative angle takes off, you brief the CRO team on the matching LP within hours, not days. When a landing page underperforms, you know whether the problem is the page or the traffic. You think in funnels, not just ad accounts.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Outcomes</div>
+      <p>This is how we measure success. Not effort, not hours - outcomes with metrics and deadlines.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 30</div>
+        <ul>
+          <li><strong>Full paid media audit complete:</strong> reviewed all active ad accounts across Meta, TikTok, and Google. Documented current spend, ROAS/MER, creative performance, campaign structure, audience strategy, and attribution setup. Identified what's working, what's wasted, and the top 5 scaling opportunities.</li>
+          <li><strong>Shopify CRO audit complete:</strong> reviewed every key page - PDPs, landing pages, cart, checkout, post-purchase. Documented current conversion rate, page speed, mobile experience, and UX issues. Prioritized fix list.</li>
+          <li><strong>Agency and vendor assessment:</strong> evaluated all existing paid media and CRO vendors/agencies. Recommendation to VP of eCommerce: keep, replace, bring in-house, or outsource.</li>
+          <li><strong>CRO execution partner identified:</strong> if not already in place, sourced and vetted an offshore CRO firm. Evaluated portfolio, turnaround speed, Shopify depth, and communication quality. Onboarding started or recommendation delivered.</li>
+          <li><strong>Funnel strategy defined:</strong> mapped the current state of every active funnel (ad > LP > purchase). Identified gaps, mismatches between ad messaging and landing experience, and the first 3 funnels to build or optimize.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 60</div>
+        <ul>
+          <li><strong>Paid campaigns restructured or optimized:</strong> campaign structure cleaned up across all channels. Budget reallocation based on audit findings. Creative testing methodology documented. Quick-win optimizations shipped.</li>
+          <li><strong>CRO firm onboarded and executing:</strong> offshore team is building landing pages and running A/B tests from your briefs. First deliverables reviewed and live. Communication cadence and QA process established.</li>
+          <li><strong>First CRO improvements live:</strong> hero PDPs optimized, cart experience improved, trust elements added. At least 2-3 landing pages rebuilt or newly built and running with paid traffic. Measurable CVR improvement vs. baseline.</li>
+          <li><strong>A/B testing program running:</strong> at least 2-3 tests live (headlines, layouts, CTAs, pricing presentation, offer framing). Results logged, learnings applied. Testing methodology documented.</li>
+          <li><strong>Weekly performance dashboard live:</strong> covering ad spend by channel, ROAS/MER, CVR by funnel, AOV, revenue per session, and CRO test results. Reviewed in operating meeting.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 90</div>
+        <ul>
+          <li><strong>MER improving or stable as spend scales:</strong> paid media is running more efficiently than at hire. Spend can be increased without MER degrading.</li>
+          <li><strong>3+ ready-to-scale funnels live:</strong> each with a tested ad angle, matching landing page, and documented playbook. At any point you can increase spend 2-3x on these funnels without conversion rate dropping.</li>
+          <li><strong>CRO firm producing consistently:</strong> turnaround on new landing pages is 2-4 business days from brief. Quality is high. You're managing output, not micromanaging execution.</li>
+          <li><strong>Creative feedback loop running:</strong> you are briefing the creative team on what angles, hooks, and formats are performing in ads. Data from paid is informing content production weekly.</li>
+          <li><strong>Landing page machine operational:</strong> when a new ad angle wins, the matching LP is briefed same day and live within 48-72 hours via the CRO firm. No bottleneck between winning creative and optimized landing experience.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 6</div>
+        <ul>
+          <li><strong>DTC revenue grown significantly:</strong> DTC as a percentage of total revenue is meaningfully higher than at hire, with profitable unit economics.</li>
+          <li><strong>MER at or above target:</strong> blended ROAS across all paid channels is improving or stable at higher spend levels.</li>
+          <li><strong>CVR improved 20%+ vs. baseline:</strong> through cumulative CRO improvements, landing page optimization, and offer testing. Documented with data.</li>
+          <li><strong>AOV improved 15%+ vs. baseline:</strong> through bundles, upsells, and offer architecture optimized through testing.</li>
+          <li><strong>5+ high-performing funnels live:</strong> each documented with playbooks so the team can scale spend without you personally managing every campaign.</li>
+          <li><strong>Offshore CRO team is a competitive advantage:</strong> faster execution at lower cost than an in-house Shopify dev. The relationship you manage produces quality work at speed.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Ongoing KPIs</div>
+      <p>Once the system is built, these are the numbers you own and review weekly. This is your scoreboard.</p>
+      <ul>
+        <li><strong>MER / blended ROAS:</strong> total DTC revenue divided by total ad spend. The primary efficiency metric.</li>
+        <li><strong>DTC revenue:</strong> total Shopify revenue. Tracked daily, reported weekly.</li>
+        <li><strong>Ad spend by channel:</strong> Meta, TikTok, Google. Budget allocation reviewed weekly.</li>
+        <li><strong>ROAS by channel:</strong> per-channel return on ad spend. Informing budget shifts.</li>
+        <li><strong>Site-wide conversion rate:</strong> tracked daily, improving through continuous CRO.</li>
+        <li><strong>CVR by landing page/funnel:</strong> each page tracked individually. Underperformers fixed or killed.</li>
+        <li><strong>AOV:</strong> influenced through bundles, upsells, and offer architecture.</li>
+        <li><strong>Revenue per session:</strong> CVR x AOV. The single best metric for storefront performance.</li>
+        <li><strong>A/B tests running:</strong> number of active tests. Target: 2-3 minimum always running.</li>
+        <li><strong>LP turnaround time:</strong> time from brief to live via CRO firm. Target: 2-4 business days.</li>
+        <li><strong>Ready-to-scale funnels:</strong> number of tested, profitable funnels. Target: 3+ at all times.</li>
+      </ul>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Competencies</div>
+      <p>Behavioral traits we interview against directly.</p>
+      <div class="competency-grid">
+        <div class="competency-item"><strong>Full-funnel thinker</strong>Connects ad creative, landing page, checkout, and post-purchase into a single revenue system. Doesn't think in channels - thinks in funnels.</div>
+        <div class="competency-item"><strong>Paid media strategist</strong>Deep platform expertise across Meta, TikTok, and Google. Understands campaign structure, bidding, audience strategy, and creative testing at scale.</div>
+        <div class="competency-item"><strong>CRO literate</strong>Understands what makes a landing page convert. Can evaluate design, copy, offer structure, and UX quality. Knows what good looks like even if they're not building it themselves.</div>
+        <div class="competency-item"><strong>Vendor manager</strong>Has managed offshore teams or agencies and held them to quality and speed standards. Knows how to brief, review, and QA external work without micromanaging.</div>
+        <div class="competency-item"><strong>Data-obsessed</strong>Lives in ad platform dashboards, GA4, and Shopify analytics. Makes decisions from data, not gut. Tests, measures, iterates.</div>
+        <div class="competency-item"><strong>Creative strategist</strong>Understands what makes an ad stop the scroll. Briefs creative teams with clarity on hooks, angles, and formats that perform.</div>
+        <div class="competency-item"><strong>Speed of execution</strong>Moves fast. When a creative wins, the matching funnel is live in days. Doesn't wait for perfect - ships, tests, iterates.</div>
+        <div class="competency-item"><strong>Radical honesty</strong>Pushes back with data. Kills underperforming campaigns and funnels without sentimentality. Says what needs to be said.</div>
+      </div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Explicit Boundaries</div>
+      <p>This role does not own:</p>
+      <ul>
+        <li>Organic social or content distribution - that belongs to the distribution function</li>
+        <li>Email/SMS (Klaviyo) - that's a separate function</li>
+        <li>Amazon PPC - that's managed within the Amazon function</li>
+        <li>Product vision, formulation philosophy, or brand worldview - those belong to the Founder</li>
+      </ul>
+      <p><strong>You own every paid dollar and every conversion on DTC.</strong> From ad spend allocation to landing page performance. The ad gets them to the site. The page converts them. You own both sides of that equation.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Decision Rights</div>
+      <p><strong>Owns:</strong> Paid media strategy and execution (Meta, TikTok, Google), CRO strategy, A/B testing program, landing page briefing and QA, offer and bundle architecture, offshore CRO team management, ad creative briefing and performance analysis, and weekly performance reporting.</p>
+      <p><strong>Reports to:</strong> VP of eCommerce.</p>
+      <p><strong>Collaborates with:</strong> Creative team on ad production and creative testing, Director of Distribution on organic amplification of winning content, operations on fulfillment capacity, and CX on post-purchase experience.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">This Role Is Not</div>
+      <ul>
+        <li>A pure media buyer who manages ad accounts but has no opinion on what happens after the click</li>
+        <li>A CRO specialist who optimizes pages but doesn't understand where the traffic comes from</li>
+        <li>A generalist marketer with paid media as one of five responsibilities</li>
+        <li>Someone who needs an in-house Shopify developer to execute every landing page change</li>
+      </ul>
+      <p>This is a performance marketer who owns the full funnel - from ad spend to conversion. You decide what ads to run and what landing pages to build. You manage the team that builds them. You own the number.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Ideal Candidate</div>
+      <ul>
+        <li>4-7 years in performance marketing / paid media with hands-on experience across Meta, TikTok, and Google at a DTC brand doing $5M-$30M+</li>
+        <li>Has personally managed $50K+/month in ad spend and scaled campaigns profitably</li>
+        <li>CRO fluency - you understand what makes landing pages convert and can evaluate Shopify work quality even if you're not the one building it</li>
+        <li>Experience managing offshore teams, agencies, or contractors - you know how to brief, QA, and hold external partners accountable to quality and speed</li>
+        <li>Thinks in funnels - you've built the ad-to-LP-to-purchase pipeline, not just managed one piece of it</li>
+        <li>Strong creative instincts - you can brief creative teams on hooks, angles, and formats that perform, backed by data from your campaigns</li>
+        <li>Comfortable with A/B testing methodology and tools (Convert, VWO, Optimizely, or Shopify native)</li>
+        <li>Supplement, health, wellness, or fitness brand experience strongly preferred</li>
+        <li>Proficient with AI tools (ChatGPT, Claude, etc.) for workflow acceleration</li>
+        <li>U.S.-based - this is a U.S.-only hire</li>
+      </ul>
+      <p><strong>Bonus:</strong> You've built the full funnel at a brand - owned paid, owned CRO, managed the execution team - and have the MER and CVR data to prove it worked.</p>
+    </div>
+
+    <!-- APPLICATION FORM -->
+    <div id="apply" class="jd-apply-section" style="text-align: left;">
+      <div class="jd-section-label">Apply</div>
+      <h3 style="font-weight: 700; font-size: 24px; color: var(--text-primary); margin-bottom: 12px; letter-spacing: -0.3px;">Interested? Let's hear from you.</h3>
+      <form class="apply-form" action="https://formsubmit.co/829bf7eb8844ba03a0685772182524d0" method="POST">
+        <input type="hidden" name="_subject" value="New Application: Director of Performance Marketing">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://careers.formulationfactory.com">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-note"><strong>Please answer the questions below in your own words.</strong> We want to hear how you think and communicate - not how well you prompt ChatGPT. AI-generated responses will be filtered out. We love AI as a tool (and use it daily) but this application is about you.</div>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="Full Name" required></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" name="Phone"></div>
+          <div class="form-group"><label>Location *</label><input type="text" name="Location" required placeholder="City, State"></div>
+        </div>
+        <div class="form-group"><label>LinkedIn URL *</label><input type="url" name="LinkedIn" required placeholder="https://linkedin.com/in/..."></div>
+        <div class="form-group"><label>Which role are you applying for? *</label><input type="text" name="Role" required value="Director of Performance Marketing"></div>
+        <div class="form-group"><label>Why this company? *</label><span class="form-hint">What about Formulation Factory specifically made you want to apply? Be specific - generic answers get filtered out.</span><textarea name="Why This Company" required rows="4"></textarea></div>
+        <div class="form-group"><label>What have you built? *</label><span class="form-hint">Describe one thing you built, scaled, or fixed at a previous company that you're most proud of. Include the numbers.</span><textarea name="What Have You Built" required rows="4"></textarea></div>
+        <div class="form-group"><label>What's your AI stack? *</label><span class="form-hint">What AI tools do you use daily and how do you use them? If you don't use AI regularly, say so.</span><textarea name="AI Stack" required rows="3"></textarea></div>
+        <div class="form-group"><label>Boss rating *</label><span class="form-hint">Who was your most recent manager? What would they rate your performance 1-10, and why?</span><textarea name="Boss Rating" required rows="3"></textarea></div>
+        <div class="form-group"><label>Salary expectations *</label><span class="form-hint">What is your expected base compensation?</span><input type="text" name="Salary Expectations" required></div>
+        <div class="form-group"><label>Anything else?</label><span class="form-hint">Portfolio links, case studies, work samples, or anything else you want us to know.</span><textarea name="Anything Else" rows="3"></textarea></div>
+        <button type="submit" class="form-submit">Submit Application</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-dist">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeModal('modal-dist')">&times;</div>
+      <div class="jd-meta">
+      <span class="jd-meta-tag">Distribution / Social</span>
+      <span class="jd-meta-tag">Remote (U.S. Only)</span>
+      <span class="jd-meta-tag">Full-Time</span>
+    </div>
+
+    <h1 class="jd-title">Director of Distribution & Social Media</h1>
+    <p class="jd-updated">Last updated: May 2026</p>
+
+    <div class="jd-detail-row">
+      <div class="jd-detail-item"><label>Reports To</label><p>VP of eCommerce</p></div>
+      <div class="jd-detail-item"><label>Location</label><p>Remote (U.S. only)</p></div>
+      <div class="jd-detail-item"><label>Compensation</label><p>$120K+ base + performance bonuses</p></div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Mission</div>
+      <p class="jd-mission">Own Formulation Factory's content distribution infrastructure and social media presence - <strong>building a network of accounts, clip channels, and distribution systems that multiply every piece of content we create into maximum impressions</strong> - so every video, post, and asset reaches 10x the audience it would on brand accounts alone.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Role Context</div>
+      <p>Most supplement brands post content to their own accounts and call it a day. We're building something different. We want a distribution machine - a network of clip channels, repost accounts, fan pages, and syndication systems across every platform that turns one piece of content into dozens of touchpoints.</p>
+      <p>You understand the world of clipping at a deep level. You know how clip channels on YouTube, TikTok, and X built massive audiences by repurposing creator content. You've seen how livestreamers on Twitch and Kick use clip distribution to grow their reach exponentially. Now you're going to apply that playbook to a brand.</p>
+      <p>You'll manage the Formulation Factory brand accounts across all platforms while simultaneously building and managing a network of distribution accounts - clip channels, topic-specific pages, niche repost accounts - that extend our reach far beyond what a single brand account can achieve. You'll build the system so others clip and distribute for us at scale.</p>
+      <p>You'll work closely with the Director of Social Commerce on UGC army efforts, feed heavily into the creative pipeline, and develop detailed, calculated distribution systems - not vibes, not guesswork - real systems with tracking, attribution, and measurable impression multipliers.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Outcomes</div>
+      <p>This is how we measure success. Not effort, not hours - outcomes with metrics and deadlines.</p>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 30</div>
+        <ul>
+          <li><strong>Full distribution audit complete:</strong> mapped every platform where our content currently lives and every platform where it should live. Documented current brand account performance, identified competitor distribution strategies, and analyzed the clip/repost landscape in the supplement and fitness space.</li>
+          <li><strong>Distribution network strategy defined:</strong> a written plan for the network of accounts to build - how many, which platforms, what content angles, what posting cadence, and how they feed back to the brand. Presented to VP of eCommerce.</li>
+          <li><strong>Clip ecosystem mapped:</strong> identified how top creators and brands use clip distribution (Twitch, Kick, YouTube, TikTok, X). Documented the playbook - what works, what doesn't, and how to apply it to a DTC brand.</li>
+          <li><strong>Brand accounts audited:</strong> reviewed all FF social accounts. Documented posting frequency, engagement rates, content performance, and gaps.</li>
+          <li><strong>Creative pipeline integration:</strong> met with Director of Social Commerce and creative team. Understand the UGC pipeline, content calendar, and where distribution fits into the workflow.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 60</div>
+        <ul>
+          <li><strong>First distribution accounts live:</strong> at least 3-5 distribution accounts launched across platforms (clip channels, topic pages, niche accounts). Content flowing, posting cadence established, early engagement tracked.</li>
+          <li><strong>Clip system operational:</strong> a system for turning long-form and hero content into clips is running - whether through internal clippers, freelancers, or AI tools. Clips distributed across the network, not just brand accounts.</li>
+          <li><strong>Brand accounts publishing at full velocity:</strong> all brand channels on consistent, high-frequency cadence. Platform-native content on each. No gaps.</li>
+          <li><strong>Multi-account management system in place:</strong> scheduling, publishing, and tracking across all accounts (brand + distribution) is organized and scalable. Not chaos - a system.</li>
+          <li><strong>UGC army coordination active:</strong> working with Director of Social Commerce to distribute UGC and creator content across the network. Content repurposed and amplified, not posted once and forgotten.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Day 90</div>
+        <ul>
+          <li><strong>Distribution network generating measurable impressions:</strong> the network accounts are collectively generating impressions that meaningfully exceed what brand accounts alone produce. Impression multiplier tracked weekly.</li>
+          <li><strong>10+ distribution accounts active:</strong> across YouTube, TikTok, X, Instagram, and/or other platforms. Each with a defined content angle, posting cadence, and growth trajectory.</li>
+          <li><strong>Clip distribution scaled:</strong> others are clipping and distributing for us - freelancers, fans, clip teams, or automated systems. You built the system, you don't have to do every clip yourself.</li>
+          <li><strong>Creative pipeline contribution:</strong> you are actively feeding the creative pipeline with distribution insights - what formats perform, what hooks get shared, what content gets clipped most.</li>
+          <li><strong>Brand engagement growing:</strong> brand account engagement rates above supplement category benchmarks on at least 2 primary platforms.</li>
+        </ul>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-header">By Month 6</div>
+        <ul>
+          <li><strong>Distribution is a competitive advantage:</strong> the network is generating 5-10x the impressions of brand accounts alone. Competitors are posting content. We're distributing it.</li>
+          <li><strong>20+ distribution accounts active and growing:</strong> each with its own audience, content angle, and measurable contribution to total impressions.</li>
+          <li><strong>Clip system is self-sustaining:</strong> clippers and distributors operating from documented playbooks and briefs. New content gets clipped and distributed within hours of publishing, not days.</li>
+          <li><strong>Brand accounts are strong standalone channels:</strong> growing followers, engagement, and organic traffic. Social is driving measurable traffic to DTC and Amazon.</li>
+          <li><strong>Full attribution in place:</strong> total impressions, engagement, and traffic tracked across the entire network (brand + distribution). Weekly report shows the complete picture.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Ongoing KPIs</div>
+      <p>Once the system is built, these are the numbers you own and review weekly. This is your scoreboard.</p>
+      <ul>
+        <li><strong>Total network impressions:</strong> combined impressions across all brand + distribution accounts. The primary reach metric.</li>
+        <li><strong>Impression multiplier:</strong> total network impressions / brand-only impressions. Target: 5-10x by month 6.</li>
+        <li><strong>Distribution account count:</strong> number of active distribution accounts. Target: 20+ by month 6.</li>
+        <li><strong>Clip volume:</strong> number of clips produced and distributed per week across the network.</li>
+        <li><strong>Brand account engagement rate:</strong> per platform. Target: above supplement category benchmarks.</li>
+        <li><strong>Brand account follower growth:</strong> net new followers per week/month across each brand platform.</li>
+        <li><strong>Content repurpose ratio:</strong> number of distribution touchpoints generated per original piece of content. Target: every hero piece hits 10+ placements.</li>
+        <li><strong>Organic traffic from social:</strong> link clicks and UTM-attributed sessions from social (brand + distribution). Tracked weekly.</li>
+        <li><strong>Creative pipeline feedback:</strong> weekly report on what content formats, hooks, and angles get the most distribution traction.</li>
+      </ul>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Scorecard - Competencies</div>
+      <p>Behavioral traits we interview against directly.</p>
+      <div class="competency-grid">
+        <div class="competency-item"><strong>Distribution architect</strong>Thinks in networks, not single accounts. Understands how to build a web of accounts and channels that multiply reach exponentially.</div>
+        <div class="competency-item"><strong>Clip culture native</strong>Deep understanding of how clipping works on Twitch, Kick, YouTube, and TikTok. Knows how clip channels build audiences and how to apply that to a brand.</div>
+        <div class="competency-item"><strong>Multi-account operator</strong>Can manage 20+ accounts across platforms without it becoming chaos. Has the systems, tools, and discipline to keep everything running.</div>
+        <div class="competency-item"><strong>Platform-native</strong>Understands each platform's algorithm, format, and distribution mechanics at a deep level. Adapts content and strategy per platform instinctively.</div>
+        <div class="competency-item"><strong>Systems builder</strong>Builds repeatable processes for clipping, distribution, and account management. Documents playbooks so the system scales beyond just you.</div>
+        <div class="competency-item"><strong>Creative thinker</strong>Understands what content gets shared, clipped, and distributed organically. Feeds insights back into the creative pipeline.</div>
+        <div class="competency-item"><strong>Data-driven</strong>Tracks impressions, engagement, and attribution across the entire network. Makes decisions from data, not gut.</div>
+        <div class="competency-item"><strong>Radical honesty</strong>Pushes back with data. Flags what's not working. Kills underperforming accounts and strategies without sentimentality.</div>
+      </div>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Explicit Boundaries</div>
+      <p>This role does not own:</p>
+      <ul>
+        <li>Paid media strategy or ad buying - that belongs to the revenue function</li>
+        <li>TikTok Shop or affiliate commerce - that belongs to the Director of Social Commerce</li>
+        <li>Product vision, formulation philosophy, or brand worldview - those belong to the Founder</li>
+        <li>Email/SMS or Shopify storefront - those are separate functions</li>
+      </ul>
+      <p><strong>You own distribution and organic social.</strong> Every impression we earn organically - on brand accounts and across the distribution network - is yours. You build the system that turns one piece of content into maximum reach.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Decision Rights</div>
+      <p><strong>Owns:</strong> All brand social accounts, distribution account network, clip system and operations, multi-account management, content distribution strategy, social publishing and scheduling, organic social performance reporting, and creative pipeline feedback.</p>
+      <p><strong>Reports to:</strong> VP of eCommerce.</p>
+      <p><strong>Collaborates with:</strong> Director of Social Commerce on UGC army and creator content distribution, creative team on content production and pipeline, CX on community escalations, and Founder on brand voice direction.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">This Role Is Not</div>
+      <ul>
+        <li>A social media manager who posts to brand accounts and calls it a day</li>
+        <li>A content creator role - you distribute and amplify, you don't produce all the content yourself</li>
+        <li>An influencer manager who sends PR packages</li>
+        <li>A paid media role - this is organic distribution and earned reach</li>
+        <li>Someone who's heard of clipping but never built a distribution system around it</li>
+      </ul>
+      <p>This is a distribution architect who also runs social - someone who understands that posting content is step one, and getting it in front of 10x the audience through systematic distribution is the actual job.</p>
+    </div>
+
+    <div class="jd-section">
+      <div class="jd-section-label">Ideal Candidate</div>
+      <ul>
+        <li>3-6 years in social media and/or content distribution with proven experience building multi-account networks</li>
+        <li>Deep understanding of clip culture - you know how Twitch and Kick clip channels work, how YouTube clip compilations build audiences, and how this applies to brand content</li>
+        <li>Experience managing 10+ social accounts simultaneously across multiple platforms with organized systems</li>
+        <li>Familiar with livestreaming platforms (Twitch, Kick) and how content from those ecosystems gets distributed across TikTok, YouTube, and X</li>
+        <li>Strong understanding of platform algorithms - what makes content get distributed by the algorithm vs just shown to followers</li>
+        <li>Experience building and managing clip teams, freelancer networks, or automated distribution systems</li>
+        <li>Proficient with social scheduling and multi-account management tools</li>
+        <li>Proficient with AI tools (ChatGPT, Claude, CapCut, etc.) for content repurposing and workflow acceleration</li>
+        <li>Supplement, health, fitness, or lifestyle brand experience preferred</li>
+        <li>U.S.-based - this is a U.S.-only hire</li>
+      </ul>
+      <p><strong>Bonus:</strong> You've built a clip channel or distribution network that grew to significant reach. You have the receipts - impression numbers, account growth, and the system you built to do it.</p>
+    </div>
+
+    <!-- APPLICATION FORM -->
+    <div id="apply" class="jd-apply-section" style="text-align: left;">
+      <div class="jd-section-label">Apply</div>
+      <h3 style="font-weight: 700; font-size: 24px; color: var(--text-primary); margin-bottom: 12px; letter-spacing: -0.3px;">Interested? Let's hear from you.</h3>
+      <form class="apply-form" action="https://formsubmit.co/829bf7eb8844ba03a0685772182524d0" method="POST">
+        <input type="hidden" name="_subject" value="New Application: Director of Distribution & Social Media">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://careers.formulationfactory.com">
+        <input type="text" name="_honey" style="display:none">
+        <div class="form-note"><strong>Please answer the questions below in your own words.</strong> We want to hear how you think and communicate - not how well you prompt ChatGPT. AI-generated responses will be filtered out. We love AI as a tool (and use it daily) but this application is about you.</div>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="Full Name" required></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" name="Phone"></div>
+          <div class="form-group"><label>Location *</label><input type="text" name="Location" required placeholder="City, State"></div>
+        </div>
+        <div class="form-group"><label>LinkedIn URL *</label><input type="url" name="LinkedIn" required placeholder="https://linkedin.com/in/..."></div>
+        <div class="form-group"><label>Which role are you applying for? *</label><input type="text" name="Role" required value="Director of Distribution & Social Media"></div>
+        <div class="form-group"><label>Why this company? *</label><span class="form-hint">What about Formulation Factory specifically made you want to apply? Be specific - generic answers get filtered out.</span><textarea name="Why This Company" required rows="4"></textarea></div>
+        <div class="form-group"><label>What have you built? *</label><span class="form-hint">Describe one thing you built, scaled, or fixed at a previous company that you're most proud of. Include the numbers.</span><textarea name="What Have You Built" required rows="4"></textarea></div>
+        <div class="form-group"><label>What's your AI stack? *</label><span class="form-hint">What AI tools do you use daily and how do you use them? If you don't use AI regularly, say so.</span><textarea name="AI Stack" required rows="3"></textarea></div>
+        <div class="form-group"><label>Boss rating *</label><span class="form-hint">Who was your most recent manager? What would they rate your performance 1-10, and why?</span><textarea name="Boss Rating" required rows="3"></textarea></div>
+        <div class="form-group"><label>Salary expectations *</label><span class="form-hint">What is your expected base compensation?</span><input type="text" name="Salary Expectations" required></div>
+        <div class="form-group"><label>Anything else?</label><span class="form-hint">Portfolio links, case studies, work samples, or anything else you want us to know.</span><textarea name="Anything Else" rows="3"></textarea></div>
+        <button type="submit" class="form-submit">Submit Application</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    // ESC key closes active modal
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+          m.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
